@@ -10,6 +10,8 @@
 
   -- configs
   {%- set unique_key = config.get('unique_key') -%}
+  {%- set incremental_strategy = config.get('incremental_strategy') or 'default' -%}
+  {%- set cdc_mode = incremental_strategy == 'cdc' -%}
   {%- set full_refresh_mode = (should_full_refresh()  or existing_relation.is_view) -%}
   {%- set on_schema_change = incremental_validate_on_schema_change(config.get('on_schema_change'), default='ignore') -%}
   {%- set partitioned_by = none -%}
@@ -44,19 +46,50 @@
   {% endif %}
   {% set python_staging_relation = none %}
 
+  {% if cdc_mode %}
+    -- the cdc strategy loads versioned change batches through its own apply rules
+    {% if language != 'sql' %}
+      {{ exceptions.raise_compiler_error("The 'cdc' incremental strategy only supports SQL models, got language: " ~ language) }}
+    {% endif %}
+    -- validates the cdc_* configs and unique_key, raising on any problem
+    {%- set cdc_cfg = duckdb__cdc_config() -%}
+    {%- set cdc_key_cols = duckdb__cdc_key_cols(unique_key) -%}
+    {%- set cdc_state_relation = duckdb__cdc_state_relation(target_relation) -%}
+  {% endif %}
+
   {{ run_hooks(pre_hooks, inside_transaction=False) }}
   -- `BEGIN` happens here:
   {{ run_hooks(pre_hooks, inside_transaction=True) }}
 
   {% if existing_relation is none %}
-    {% set build_sql = create_table_as(False, target_relation, compiled_code, language, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% if cdc_mode %}
+      {% do run_query(create_table_as(temporary, temp_relation, compiled_code, language)) %}
+      {% set build_sql = duckdb__cdc_full_load_sql(target_relation, temp_relation, unique_key, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% else %}
+      {% set build_sql = create_table_as(False, target_relation, compiled_code, language, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% endif %}
   {% elif full_refresh_mode and has_foreign_key_constraints(existing_relation) %}
     {#-- Tables with foreign keys must not be renamed (see has_foreign_key_constraints) --#}
     {% set dropped_dependents = drop_relation_for_rebuild(existing_relation) %}
-    {% set build_sql = create_table_as(False, target_relation, compiled_code, language, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% if cdc_mode %}
+      {#-- full-refresh rebuilds the version state from the new batch, in the same transaction --#}
+      {% do adapter.drop_relation(cdc_state_relation) %}
+      {% do run_query(create_table_as(temporary, temp_relation, compiled_code, language)) %}
+      {% set build_sql = duckdb__cdc_full_load_sql(target_relation, temp_relation, unique_key, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% else %}
+      {% set build_sql = create_table_as(False, target_relation, compiled_code, language, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% endif %}
   {% elif full_refresh_mode %}
-    {% set build_sql = create_table_as(False, intermediate_relation, compiled_code, language, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
-    {% set need_swap = true %}
+    {% if cdc_mode %}
+      {#-- drop and rebuild in-transaction so a failed batch rolls back both tables --#}
+      {% set dropped_dependents = drop_relation_for_rebuild(existing_relation) %}
+      {% do adapter.drop_relation(cdc_state_relation) %}
+      {% do run_query(create_table_as(temporary, temp_relation, compiled_code, language)) %}
+      {% set build_sql = duckdb__cdc_full_load_sql(target_relation, temp_relation, unique_key, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+    {% else %}
+      {% set build_sql = create_table_as(False, intermediate_relation, compiled_code, language, partitioned_by=partitioned_by, sorted_by=sorted_by) %}
+      {% set need_swap = true %}
+    {% endif %}
   {% else %}
     {% if language == 'python' %}
       {% set build_python = create_table_as(temporary, temp_relation, compiled_code, language, partitioned_by=none, sorted_by=none) %}
@@ -70,17 +103,26 @@
     {% else %} {# SQL #}
       {% do run_query(create_table_as(temporary, temp_relation, compiled_code, language, partitioned_by=none, sorted_by=none)) %}
     {% endif %}
-    {% do adapter.expand_target_column_types(
-             from_relation=temp_relation,
-             to_relation=target_relation) %}
-    {#-- Process schema changes. Returns dict of changes if successful. Use source columns for upserting/merging --#}
-    {% set dest_columns = process_schema_changes(on_schema_change, temp_relation, existing_relation) %}
+    {% if cdc_mode %}
+      {#-- schema changes only see the business columns; the version/operation
+          columns of the batch must never be added to the business table --#}
+      {%- set cdc_schema_relation = duckdb__cdc_business_view(temp_relation, cdc_key_cols, cdc_cfg) -%}
+      {% do adapter.expand_target_column_types(
+               from_relation=cdc_schema_relation,
+               to_relation=target_relation) %}
+      {% set dest_columns = process_schema_changes(on_schema_change, cdc_schema_relation, existing_relation) %}
+    {% else %}
+      {% do adapter.expand_target_column_types(
+               from_relation=temp_relation,
+               to_relation=target_relation) %}
+      {#-- Process schema changes. Returns dict of changes if successful. Use source columns for upserting/merging --#}
+      {% set dest_columns = process_schema_changes(on_schema_change, temp_relation, existing_relation) %}
+    {% endif %}
     {% if not dest_columns %}
       {% set dest_columns = adapter.get_columns_in_relation(existing_relation) %}
     {% endif %}
 
     {#-- Get the incremental_strategy, the macro to use for the strategy, and build the sql --#}
-    {% set incremental_strategy = config.get('incremental_strategy') or 'default' %}
     {% set incremental_predicates = config.get('predicates', none) or config.get('incremental_predicates', none) %}
     {% set strategy_sql_macro_func = adapter.get_incremental_strategy_macro(context, incremental_strategy) %}
     {% set strategy_arg_dict = ({'target_relation': target_relation, 'temp_relation': temp_relation, 'unique_key': unique_key, 'dest_columns': dest_columns, 'incremental_predicates': incremental_predicates }) %}

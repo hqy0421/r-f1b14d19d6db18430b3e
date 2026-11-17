@@ -1,3 +1,13 @@
+Unreleased
+----------
+
+- Added a `cdc` incremental strategy for SQL models that loads versioned CDC batches (business key, integer version,
+  upsert/delete operation, full business row) from replayable, out-of-order feeds. The highest version per key wins,
+  stale versions are ignored, identical replays are no-ops, and conflicting contents at the same version fail the run.
+  Applied versions are tracked in a `<model>__dbt_cdc_state` table that commits in the same transaction as the business
+  table, so deletes are remembered across runs and keys can be resurrected by newer versions. The version/operation
+  columns never land in the business table, including via `on_schema_change`.
+
 1.11.1 (2026-10-26)
 -------------------
 

@@ -1,0 +1,616 @@
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E005", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Acquiring new duckdb connection '_test'", "name": "NewConnection", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.934719Z"}}
+{"data": {"relation": {"database": "memory", "identifier": "", "schema": "test17949087771549123447_test_incremental"}}, "info": {"category": "", "code": "E020", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Creating schema \"database: \"memory\"\nschema: \"test17949087771549123447_test_incremental\"\n\"", "name": "SchemaCreation", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.936515Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.939546Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "On _test: \n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  ", "name": "SQLQuery", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.941142Z"}}
+{"data": {"connection_state": "init"}, "info": {"category": "", "code": "E037", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Opening a new connection, currently in state init", "name": "NewConnectionOpening", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.942602Z"}}
+{"data": {"elapsed": 0.018362701, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "SQL status: OK in 0.018 seconds", "name": "SQLQueryStatus", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.961031Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.963450Z"}}
+{"data": {"conn_name": "_test", "sql": "BEGIN"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "On _test: BEGIN", "name": "SQLQuery", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.965016Z"}}
+{"data": {"elapsed": 0.00033541804, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.966849Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.968340Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n    \n        create schema if not exists \"memory\".\"test17949087771549123447_test_incremental\"\n    "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "On _test: \n    \n    \n        create schema if not exists \"memory\".\"test17949087771549123447_test_incremental\"\n    ", "name": "SQLQuery", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.969579Z"}}
+{"data": {"elapsed": 0.00041162298, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.971267Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E018", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLCommit", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.973250Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.974680Z"}}
+{"data": {"conn_name": "_test", "sql": "COMMIT"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLQuery", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.975891Z"}}
+{"data": {"elapsed": 0.00044212403, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.977824Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E010", "extra": {}, "invocation_id": "8f16245d-eb8e-4deb-ae04-a6a2a07c8055", "level": "debug", "msg": "On _test: Close", "name": "ConnectionClosed", "pid": 10342, "thread": "MainThread", "ts": "2026-11-17T09:46:16.979189Z"}}
+
+
+============================== 17:46:16.993771 | a5db3435-d72a-4f93-83b3-39757a4f9413 ==============================
+[0m17:46:16.993771 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:46:16.995770 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'send_anonymous_usage_stats': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-9/profile3', 'log_format': 'default', 'log_path': '/workspace/logs/test17949087771549123447', 'invocation_command': 'dbt tests/functional/adapter/test_incremental.py tests/functional/adapter/test_rematerialize.py tests/functional/adapter/test_empty.py tests/functional/adapter/test_ephemeral.py tests/functional/adapter/test_constraints.py tests/functional/adapter/test_python_model.py tests/functional/adapter/test_simple_snapshot.py -q', 'static_parser': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'hints_enabled': 'True', 'no_print': 'None', 'introspect': 'True', 'printer_width': '80', 'write_json': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'empty': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'use_colors': 'True', 'target_path': '/task-cache/dbt-target'}
+[0m17:46:16.997469 [debug] [MainThread]: Connection '_test' was properly closed.
+[0m17:46:17.004977 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m17:46:17.083343 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m17:46:17.108594 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:46:17.110151 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:46:17.738350 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:46:17.748546 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:46:17.758702 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:46:17.769630 [info ] [MainThread]: Found 13 models, 528 macros
+[0m17:46:17.772240 [info ] [MainThread]: 
+[0m17:46:17.773846 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m17:46:17.775426 [info ] [MainThread]: 
+[0m17:46:17.776788 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:46:17.778919 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m17:46:17.781304 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m17:46:17.782525 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m17:46:17.783672 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:46:17.785942 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:46:17.788680 [debug] [ThreadPool]: On list_memory: Close
+[0m17:46:17.791095 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949087771549123447_test_incremental)
+[0m17:46:17.792946 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949087771549123447_test_incremental"
+"
+[0m17:46:17.795624 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:17.796885 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949087771549123447_test_incremental"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m17:46:17.798268 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:46:17.800437 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:46:17.802563 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:17.803921 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: BEGIN
+[0m17:46:17.805354 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:46:17.806460 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:17.807480 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949087771549123447_test_incremental"} */
+
+    
+    
+        create schema if not exists "memory"."test17949087771549123447_test_incremental"
+    
+[0m17:46:17.808888 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:46:17.810416 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: COMMIT
+[0m17:46:17.811556 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:17.812961 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: COMMIT
+[0m17:46:17.814831 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:46:17.816276 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: Close
+[0m17:46:17.820334 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949087771549123447_test_incremental, now list_memory_test17949087771549123447_test_incremental)
+[0m17:46:17.823093 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949087771549123447_test_incremental"
+[0m17:46:17.824701 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: BEGIN
+[0m17:46:17.826259 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:46:17.828395 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:46:17.829956 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949087771549123447_test_incremental"
+[0m17:46:17.831392 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949087771549123447_test_incremental"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949087771549123447_test_incremental'
+    and lower(table_catalog) = 'memory'
+  
+[0m17:46:17.836934 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:46:17.840419 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: ROLLBACK
+[0m17:46:17.842598 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: Close
+[0m17:46:17.844838 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:17.846675 [debug] [MainThread]: On master: BEGIN
+[0m17:46:17.848284 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:46:17.850440 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:46:17.852199 [debug] [MainThread]: On master: COMMIT
+[0m17:46:17.853988 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:17.856761 [debug] [MainThread]: On master: COMMIT
+[0m17:46:17.859301 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:46:17.860945 [debug] [MainThread]: On master: Close
+[0m17:46:17.883860 [debug] [Thread-120]: Began running node model.test.model_a
+[0m17:46:17.892771 [info ] [Thread-120]: 1 of 2 START sql table model test17949087771549123447_test_incremental.model_a . [RUN]
+[0m17:46:17.897391 [debug] [Thread-120]: Re-using an available connection from the pool (formerly list_memory_test17949087771549123447_test_incremental, now model.test.model_a)
+[0m17:46:17.898946 [debug] [Thread-120]: Began compiling node model.test.model_a
+[0m17:46:17.902041 [debug] [Thread-120]: Writing injected SQL for node "model.test.model_a"
+[0m17:46:17.911850 [debug] [Thread-120]: Began executing node model.test.model_a
+[0m17:46:17.914090 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:17.915785 [debug] [Thread-120]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+select database_name, type from duckdb_databases()
+[0m17:46:17.917500 [debug] [Thread-120]: Opening a new connection, currently in state closed
+[0m17:46:17.919703 [debug] [Thread-120]: SQL status: OK in 0.002 seconds
+[0m17:46:17.922331 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:17.923985 [debug] [Thread-120]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949087771549123447_test_incremental')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:46:17.926629 [debug] [Thread-120]: SQL status: OK in 0.001 seconds
+[0m17:46:17.931892 [debug] [Thread-120]: Writing runtime sql for node "model.test.model_a"
+[0m17:46:17.942284 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:17.952196 [debug] [Thread-120]: On model.test.model_a: BEGIN
+[0m17:46:17.964147 [debug] [Thread-120]: SQL status: OK in 0.002 seconds
+[0m17:46:17.966058 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:17.971543 [debug] [Thread-120]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+    
+
+    create  table
+      "memory"."test17949087771549123447_test_incremental"."model_a__dbt_tmp"
+  
+    
+    as (
+      
+
+with source_data as (
+
+    select 1 as id, 'aaa' as field1, 'bbb' as field2, 111 as field3, 'TTT' as field4
+    union all select 2 as id, 'ccc' as field1, 'ddd' as field2, 222 as field3, 'UUU' as field4
+    union all select 3 as id, 'eee' as field1, 'fff' as field2, 333 as field3, 'VVV' as field4
+    union all select 4 as id, 'ggg' as field1, 'hhh' as field2, 444 as field3, 'WWW' as field4
+    union all select 5 as id, 'iii' as field1, 'jjj' as field2, 555 as field3, 'XXX' as field4
+    union all select 6 as id, 'kkk' as field1, 'lll' as field2, 666 as field3, 'YYY' as field4
+
+)
+
+select id
+       ,field1
+       ,field2
+       ,field3
+       ,field4
+
+from source_data
+    );
+    
+  
+[0m17:46:17.980044 [debug] [Thread-120]: SQL status: OK in 0.004 seconds
+[0m17:46:17.988489 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:17.998808 [debug] [Thread-120]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+alter table "memory"."test17949087771549123447_test_incremental"."model_a__dbt_tmp" rename to "model_a"
+[0m17:46:18.003389 [debug] [Thread-120]: SQL status: OK in 0.001 seconds
+[0m17:46:18.008261 [debug] [Thread-120]: On model.test.model_a: COMMIT
+[0m17:46:18.010395 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:18.012347 [debug] [Thread-120]: On model.test.model_a: COMMIT
+[0m17:46:18.015365 [debug] [Thread-120]: SQL status: OK in 0.001 seconds
+[0m17:46:18.020216 [debug] [Thread-120]: Using duckdb connection "model.test.model_a"
+[0m17:46:18.022483 [debug] [Thread-120]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+      drop table if exists "memory"."test17949087771549123447_test_incremental"."model_a__dbt_backup" cascade
+    
+[0m17:46:18.025464 [debug] [Thread-120]: SQL status: OK in 0.001 seconds
+[0m17:46:18.029470 [debug] [Thread-120]: On model.test.model_a: Close
+[0m17:46:18.032378 [info ] [Thread-120]: 1 of 2 OK created sql table model test17949087771549123447_test_incremental.model_a  [[32mOK[0m in 0.13s]
+[0m17:46:18.036282 [debug] [Thread-120]: Finished running node model.test.model_a
+[0m17:46:18.040576 [debug] [Thread-122]: Began running node model.test.incremental_append_new_columns_with_space
+[0m17:46:18.042858 [info ] [Thread-122]: 2 of 2 START sql incremental model test17949087771549123447_test_incremental.incremental_append_new_columns_with_space  [RUN]
+[0m17:46:18.045423 [debug] [Thread-122]: Acquiring new duckdb connection 'model.test.incremental_append_new_columns_with_space'
+[0m17:46:18.047401 [debug] [Thread-122]: Began compiling node model.test.incremental_append_new_columns_with_space
+[0m17:46:18.057082 [debug] [Thread-122]: Writing injected SQL for node "model.test.incremental_append_new_columns_with_space"
+[0m17:46:18.066925 [debug] [Thread-122]: Began executing node model.test.incremental_append_new_columns_with_space
+[0m17:46:18.074033 [debug] [Thread-122]: Writing runtime sql for node "model.test.incremental_append_new_columns_with_space"
+[0m17:46:18.087122 [debug] [Thread-122]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:18.090774 [debug] [Thread-122]: On model.test.incremental_append_new_columns_with_space: BEGIN
+[0m17:46:18.092277 [debug] [Thread-122]: Opening a new connection, currently in state init
+[0m17:46:18.098535 [debug] [Thread-122]: SQL status: OK in 0.005 seconds
+[0m17:46:18.101792 [debug] [Thread-122]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:18.103641 [debug] [Thread-122]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+    
+
+    create  table
+      "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space"
+  
+    
+    as (
+      
+
+
+
+WITH source_data AS (SELECT * FROM "memory"."test17949087771549123447_test_incremental"."model_a" )
+
+
+
+SELECT id,
+       cast(field1 as TEXT) as field1,
+       cast(field2 as TEXT) as field2
+FROM source_data where id <= 3
+
+
+    );
+    
+  
+  
+[0m17:46:18.106885 [debug] [Thread-122]: SQL status: OK in 0.002 seconds
+[0m17:46:18.111001 [debug] [Thread-122]: On model.test.incremental_append_new_columns_with_space: COMMIT
+[0m17:46:18.112917 [debug] [Thread-122]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:18.114577 [debug] [Thread-122]: On model.test.incremental_append_new_columns_with_space: COMMIT
+[0m17:46:18.118806 [debug] [Thread-122]: SQL status: OK in 0.001 seconds
+[0m17:46:18.124147 [debug] [Thread-122]: On model.test.incremental_append_new_columns_with_space: Close
+[0m17:46:18.126128 [info ] [Thread-122]: 2 of 2 OK created sql incremental model test17949087771549123447_test_incremental.incremental_append_new_columns_with_space  [[32mOK[0m in 0.08s]
+[0m17:46:18.130163 [debug] [Thread-122]: Finished running node model.test.incremental_append_new_columns_with_space
+[0m17:46:18.134549 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:18.136115 [debug] [MainThread]: On master: BEGIN
+[0m17:46:18.137755 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:46:18.139501 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:46:18.140860 [debug] [MainThread]: On master: COMMIT
+[0m17:46:18.142431 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:18.143805 [debug] [MainThread]: On master: COMMIT
+[0m17:46:18.146114 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:46:18.147405 [debug] [MainThread]: On master: Close
+[0m17:46:18.148854 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:46:18.150278 [debug] [MainThread]: Connection 'model.test.model_a' was properly closed.
+[0m17:46:18.151736 [debug] [MainThread]: Connection 'model.test.incremental_append_new_columns_with_space' was properly closed.
+[0m17:46:18.153100 [info ] [MainThread]: 
+[0m17:46:18.154460 [info ] [MainThread]: Finished running 1 incremental model, 1 table model in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m17:46:18.156449 [debug] [MainThread]: Command end result
+[0m17:46:18.230213 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:46:18.239719 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:46:18.249272 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:46:18.255297 [debug] [MainThread]: Wrote artifact RunExecutionResult to /task-cache/dbt-target/run_results.json
+[0m17:46:18.256790 [info ] [MainThread]: 
+[0m17:46:18.263001 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:46:18.264327 [info ] [MainThread]: 
+[0m17:46:18.265905 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m17:46:18.267802 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.2769665, "process_in_blocks": "27767", "process_kernel_time": 2.614704, "process_mem_max_rss": "227252", "process_out_blocks": "504", "process_user_time": 14.911099}
+[0m17:46:18.269048 [debug] [MainThread]: Command `cli run` succeeded at 17:46:18.268924 after 1.28 seconds
+[0m17:46:18.270161 [debug] [MainThread]: Flushing usage events
+
+
+============================== 17:46:18.281109 | dd9d0168-9363-48c7-a55a-fdca95451436 ==============================
+[0m17:46:18.281109 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:46:18.282382 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'send_anonymous_usage_stats': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-9/profile3', 'log_format': 'default', 'log_path': '/workspace/logs/test17949087771549123447', 'invocation_command': 'dbt tests/functional/adapter/test_incremental.py tests/functional/adapter/test_rematerialize.py tests/functional/adapter/test_empty.py tests/functional/adapter/test_ephemeral.py tests/functional/adapter/test_constraints.py tests/functional/adapter/test_python_model.py tests/functional/adapter/test_simple_snapshot.py -q', 'static_parser': 'True', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'hints_enabled': 'True', 'no_print': 'None', 'introspect': 'True', 'printer_width': '80', 'write_json': 'True', 'use_experimental_parser': 'False', 'debug': 'False', 'empty': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'use_colors': 'True', 'target_path': '/task-cache/dbt-target'}
+[0m17:46:18.288996 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m17:46:18.363437 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m17:46:18.883128 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:46:18.885314 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:46:18.886646 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:46:18.954353 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:46:18.962562 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:46:18.971565 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:46:18.978784 [info ] [MainThread]: Found 13 models, 528 macros
+[0m17:46:18.980470 [info ] [MainThread]: 
+[0m17:46:18.981553 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m17:46:18.982562 [info ] [MainThread]: 
+[0m17:46:18.983783 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:46:18.985302 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m17:46:18.987860 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m17:46:18.989529 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m17:46:18.990628 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:46:18.992720 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:46:18.994471 [debug] [ThreadPool]: On list_memory: Close
+[0m17:46:18.995956 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949087771549123447_test_incremental)
+[0m17:46:18.998576 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949087771549123447_test_incremental"
+"
+[0m17:46:19.000801 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:19.002202 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949087771549123447_test_incremental"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m17:46:19.003237 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:46:19.005141 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:46:19.006851 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:19.007793 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: BEGIN
+[0m17:46:19.008895 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:46:19.009748 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:19.010553 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949087771549123447_test_incremental"} */
+
+    
+    
+        create schema if not exists "memory"."test17949087771549123447_test_incremental"
+    
+[0m17:46:19.011702 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:46:19.012990 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: COMMIT
+[0m17:46:19.014030 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949087771549123447_test_incremental"
+[0m17:46:19.015128 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: COMMIT
+[0m17:46:19.016363 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:46:19.017266 [debug] [ThreadPool]: On create_memory_test17949087771549123447_test_incremental: Close
+[0m17:46:19.019620 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949087771549123447_test_incremental, now list_memory_test17949087771549123447_test_incremental)
+[0m17:46:19.021572 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949087771549123447_test_incremental"
+[0m17:46:19.022478 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: BEGIN
+[0m17:46:19.023361 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:46:19.024890 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:46:19.025850 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949087771549123447_test_incremental"
+[0m17:46:19.026829 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949087771549123447_test_incremental"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949087771549123447_test_incremental'
+    and lower(table_catalog) = 'memory'
+  
+[0m17:46:19.029364 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:46:19.031482 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: ROLLBACK
+[0m17:46:19.032957 [debug] [ThreadPool]: On list_memory_test17949087771549123447_test_incremental: Close
+[0m17:46:19.034871 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:19.036153 [debug] [MainThread]: On master: BEGIN
+[0m17:46:19.037333 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:46:19.038917 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:46:19.039914 [debug] [MainThread]: On master: COMMIT
+[0m17:46:19.040972 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:19.041932 [debug] [MainThread]: On master: COMMIT
+[0m17:46:19.043171 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:46:19.044274 [debug] [MainThread]: On master: Close
+[0m17:46:19.047078 [debug] [Thread-127]: Began running node model.test.model_a
+[0m17:46:19.048531 [info ] [Thread-127]: 1 of 2 START sql table model test17949087771549123447_test_incremental.model_a . [RUN]
+[0m17:46:19.049995 [debug] [Thread-127]: Re-using an available connection from the pool (formerly list_memory_test17949087771549123447_test_incremental, now model.test.model_a)
+[0m17:46:19.051137 [debug] [Thread-127]: Began compiling node model.test.model_a
+[0m17:46:19.054250 [debug] [Thread-127]: Writing injected SQL for node "model.test.model_a"
+[0m17:46:19.060480 [debug] [Thread-127]: Began executing node model.test.model_a
+[0m17:46:19.062479 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.063699 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+select database_name, type from duckdb_databases()
+[0m17:46:19.064806 [debug] [Thread-127]: Opening a new connection, currently in state closed
+[0m17:46:19.066576 [debug] [Thread-127]: SQL status: OK in 0.002 seconds
+[0m17:46:19.068749 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.069962 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949087771549123447_test_incremental')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:46:19.071710 [debug] [Thread-127]: SQL status: OK in 0.001 seconds
+[0m17:46:19.075551 [debug] [Thread-127]: Writing runtime sql for node "model.test.model_a"
+[0m17:46:19.083793 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.085184 [debug] [Thread-127]: On model.test.model_a: BEGIN
+[0m17:46:19.087157 [debug] [Thread-127]: SQL status: OK in 0.000 seconds
+[0m17:46:19.088404 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.089583 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+    
+
+    create  table
+      "memory"."test17949087771549123447_test_incremental"."model_a__dbt_tmp"
+  
+    
+    as (
+      
+
+with source_data as (
+
+    select 1 as id, 'aaa' as field1, 'bbb' as field2, 111 as field3, 'TTT' as field4
+    union all select 2 as id, 'ccc' as field1, 'ddd' as field2, 222 as field3, 'UUU' as field4
+    union all select 3 as id, 'eee' as field1, 'fff' as field2, 333 as field3, 'VVV' as field4
+    union all select 4 as id, 'ggg' as field1, 'hhh' as field2, 444 as field3, 'WWW' as field4
+    union all select 5 as id, 'iii' as field1, 'jjj' as field2, 555 as field3, 'XXX' as field4
+    union all select 6 as id, 'kkk' as field1, 'lll' as field2, 666 as field3, 'YYY' as field4
+
+)
+
+select id
+       ,field1
+       ,field2
+       ,field3
+       ,field4
+
+from source_data
+    );
+    
+  
+[0m17:46:19.093183 [debug] [Thread-127]: SQL status: OK in 0.002 seconds
+[0m17:46:19.095413 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.096734 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE database_name = 'memory'
+      AND schema_name = 'test17949087771549123447_test_incremental'
+      AND table_name = 'model_a'
+  
+[0m17:46:19.098733 [debug] [Thread-127]: SQL status: OK in 0.001 seconds
+[0m17:46:19.101838 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.102837 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+alter table "memory"."test17949087771549123447_test_incremental"."model_a" rename to "model_a__dbt_backup"
+[0m17:46:19.104345 [debug] [Thread-127]: SQL status: OK in 0.001 seconds
+[0m17:46:19.106812 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.107791 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+alter table "memory"."test17949087771549123447_test_incremental"."model_a__dbt_tmp" rename to "model_a"
+[0m17:46:19.109155 [debug] [Thread-127]: SQL status: OK in 0.000 seconds
+[0m17:46:19.112215 [debug] [Thread-127]: On model.test.model_a: COMMIT
+[0m17:46:19.113420 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.114529 [debug] [Thread-127]: On model.test.model_a: COMMIT
+[0m17:46:19.116033 [debug] [Thread-127]: SQL status: OK in 0.000 seconds
+[0m17:46:19.118310 [debug] [Thread-127]: Using duckdb connection "model.test.model_a"
+[0m17:46:19.119490 [debug] [Thread-127]: On model.test.model_a: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.model_a"} */
+
+      drop table if exists "memory"."test17949087771549123447_test_incremental"."model_a__dbt_backup" cascade
+    
+[0m17:46:19.121610 [debug] [Thread-127]: SQL status: OK in 0.001 seconds
+[0m17:46:19.124060 [debug] [Thread-127]: On model.test.model_a: Close
+[0m17:46:19.125650 [info ] [Thread-127]: 1 of 2 OK created sql table model test17949087771549123447_test_incremental.model_a  [[32mOK[0m in 0.08s]
+[0m17:46:19.127088 [debug] [Thread-127]: Finished running node model.test.model_a
+[0m17:46:19.128605 [debug] [Thread-129]: Began running node model.test.incremental_append_new_columns_with_space
+[0m17:46:19.129943 [info ] [Thread-129]: 2 of 2 START sql incremental model test17949087771549123447_test_incremental.incremental_append_new_columns_with_space  [RUN]
+[0m17:46:19.131155 [debug] [Thread-129]: Acquiring new duckdb connection 'model.test.incremental_append_new_columns_with_space'
+[0m17:46:19.132206 [debug] [Thread-129]: Began compiling node model.test.incremental_append_new_columns_with_space
+[0m17:46:19.135979 [debug] [Thread-129]: Writing injected SQL for node "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.142893 [debug] [Thread-129]: Began executing node model.test.incremental_append_new_columns_with_space
+[0m17:46:19.146925 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.148316 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+    
+    
+
+    create temporary table
+      "incremental_append_new_columns_with_space__dbt_tmp20261117174619146218"
+  
+    
+    as (
+      
+
+
+
+WITH source_data AS (SELECT * FROM "memory"."test17949087771549123447_test_incremental"."model_a" )
+
+
+
+SELECT id,
+       cast(field1 as TEXT) as field1,
+       cast(field2 as TEXT) as field2,
+       cast(field3 as TEXT) as "field 3",
+       cast(field4 as TEXT) as "field 4"
+FROM source_data WHERE id NOT IN (SELECT id from "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space" )
+
+
+    );
+    
+  
+  
+[0m17:46:19.149661 [debug] [Thread-129]: Opening a new connection, currently in state init
+[0m17:46:19.153229 [debug] [Thread-129]: SQL status: OK in 0.004 seconds
+[0m17:46:19.157245 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.158845 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: BEGIN
+[0m17:46:19.160915 [debug] [Thread-129]: SQL status: OK in 0.000 seconds
+[0m17:46:19.162546 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.164208 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+      select
+          column_name,
+          column_type as data_type,
+          cast(null as bigint) as character_maximum_length,
+          cast(null as bigint) as numeric_precision,
+          cast(null as bigint) as numeric_scale
+      from (describe "incremental_append_new_columns_with_space__dbt_tmp20261117174619146218")
+  
+[0m17:46:19.166994 [debug] [Thread-129]: SQL status: OK in 0.001 seconds
+[0m17:46:19.170828 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.172354 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+      select
+          column_name,
+          column_type as data_type,
+          cast(null as bigint) as character_maximum_length,
+          cast(null as bigint) as numeric_precision,
+          cast(null as bigint) as numeric_scale
+      from (describe "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space")
+  
+[0m17:46:19.174435 [debug] [Thread-129]: SQL status: OK in 0.001 seconds
+[0m17:46:19.177069 [debug] [Thread-129]: 
+    In "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space":
+        Schema changed: True
+        Source columns not in target: [DuckDBColumn(column='field 3', dtype='VARCHAR', char_size=None, numeric_precision=None, numeric_scale=None, fields=[]), DuckDBColumn(column='field 4', dtype='VARCHAR', char_size=None, numeric_precision=None, numeric_scale=None, fields=[])]
+        Target columns not in source: []
+        New column types: []
+  
+[0m17:46:19.179073 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.180363 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+    alter table "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space" add column
+           "field 3" character varying(256)
+  
+[0m17:46:19.182251 [debug] [Thread-129]: SQL status: OK in 0.001 seconds
+[0m17:46:19.184616 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.185855 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+    alter table "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space" add column
+           "field 4" character varying(256)
+  
+[0m17:46:19.187879 [debug] [Thread-129]: SQL status: OK in 0.001 seconds
+[0m17:46:19.190107 [debug] [Thread-129]: 
+    In "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space":
+        Schema change approach: append_new_columns
+        Columns added: [DuckDBColumn(column='field 3', dtype='VARCHAR', char_size=None, numeric_precision=None, numeric_scale=None, fields=[]), DuckDBColumn(column='field 4', dtype='VARCHAR', char_size=None, numeric_precision=None, numeric_scale=None, fields=[])]
+        Columns removed: []
+        Data types changed: []
+  
+[0m17:46:19.191578 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.192739 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+SELECT version()
+[0m17:46:19.194222 [debug] [Thread-129]: SQL status: OK in 0.001 seconds
+[0m17:46:19.196210 [debug] [Thread-129]: Writing runtime sql for node "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.203021 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.204222 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.incremental_append_new_columns_with_space"} */
+
+        
+            delete from "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space"
+            where (
+                id) in (
+                select (id)
+                from "incremental_append_new_columns_with_space__dbt_tmp20261117174619146218"
+            );
+
+        
+    
+
+    insert into "memory"."test17949087771549123447_test_incremental"."incremental_append_new_columns_with_space" ("id", "field1", "field2", "field 3", "field 4")
+    (
+        select "id", "field1", "field2", "field 3", "field 4"
+        from "incremental_append_new_columns_with_space__dbt_tmp20261117174619146218"
+    )
+  
+[0m17:46:19.207299 [debug] [Thread-129]: SQL status: OK in 0.002 seconds
+[0m17:46:19.209607 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: COMMIT
+[0m17:46:19.210590 [debug] [Thread-129]: Using duckdb connection "model.test.incremental_append_new_columns_with_space"
+[0m17:46:19.211580 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: COMMIT
+[0m17:46:19.213206 [debug] [Thread-129]: SQL status: OK in 0.001 seconds
+[0m17:46:19.214597 [debug] [Thread-129]: On model.test.incremental_append_new_columns_with_space: Close
+[0m17:46:19.216315 [info ] [Thread-129]: 2 of 2 OK created sql incremental model test17949087771549123447_test_incremental.incremental_append_new_columns_with_space  [[32mOK[0m in 0.09s]
+[0m17:46:19.217536 [debug] [Thread-129]: Finished running node model.test.incremental_append_new_columns_with_space
+[0m17:46:19.220159 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:19.221303 [debug] [MainThread]: On master: BEGIN
+[0m17:46:19.223917 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:46:19.225884 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:46:19.227237 [debug] [MainThread]: On master: COMMIT
+[0m17:46:19.228607 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:46:19.229768 [debug] [MainThread]: On master: COMMIT
+[0m17:46:19.231497 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:46:19.232928 [debug] [MainThread]: On master: Close
+[0m17:46:19.234323 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:46:19.235373 [debug] [MainThread]: Connection 'model.test.model_a' was properly closed.
+[0m17:46:19.236311 [debug] [MainThread]: Connection 'model.test.incremental_append_new_columns_with_space' was properly closed.
+[0m17:46:19.237199 [info ] [MainThread]: 
+[0m17:46:19.238241 [info ] [MainThread]: Finished running 1 incremental model, 1 table model in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m17:46:19.240066 [debug] [MainThread]: Command end result
+[0m17:46:19.308123 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:46:19.317286 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:46:19.326546 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:46:19.332362 [debug] [MainThread]: Wrote artifact RunExecutionResult to /task-cache/dbt-target/run_results.json
+[0m17:46:19.333679 [info ] [MainThread]: 
+[0m17:46:19.335079 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:46:19.336349 [info ] [MainThread]: 
+[0m17:46:19.337505 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m17:46:19.339135 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.0606333, "process_in_blocks": "29250", "process_kernel_time": 2.70702, "process_mem_max_rss": "227252", "process_out_blocks": "504", "process_user_time": 15.198157}
+[0m17:46:19.340530 [debug] [MainThread]: Command `cli run` succeeded at 17:46:19.340403 after 1.06 seconds
+[0m17:46:19.341683 [debug] [MainThread]: Flushing usage events
+[0m17:46:19.343706 [debug] [MainThread]: Acquiring new duckdb connection '_test'
+[0m17:46:19.344922 [debug] [MainThread]: Dropping schema "database: "memory"
+schema: "test17949087771549123447_test_incremental"
+".
+[0m17:46:19.347178 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:46:19.348420 [debug] [MainThread]: On _test: BEGIN
+[0m17:46:19.349820 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:46:19.351419 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:46:19.352623 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:46:19.353981 [debug] [MainThread]: On _test: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "_test"} */
+drop schema if exists "memory"."test17949087771549123447_test_incremental" cascade
+[0m17:46:19.355663 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:46:19.357364 [debug] [MainThread]: On _test: COMMIT
+[0m17:46:19.358624 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:46:19.359882 [debug] [MainThread]: On _test: COMMIT
+[0m17:46:19.362178 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:46:19.364493 [debug] [MainThread]: On _test: Close

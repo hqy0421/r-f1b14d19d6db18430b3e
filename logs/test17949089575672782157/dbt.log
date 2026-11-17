@@ -1,0 +1,929 @@
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E005", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Acquiring new duckdb connection '_test'", "name": "NewConnection", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.098911Z"}}
+{"data": {"relation": {"database": "memory", "identifier": "", "schema": "test17949089575672782157_test_rematerialize"}}, "info": {"category": "", "code": "E020", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Creating schema \"database: \"memory\"\nschema: \"test17949089575672782157_test_rematerialize\"\n\"", "name": "SchemaCreation", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.100858Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.105974Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "On _test: \n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  ", "name": "SQLQuery", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.107667Z"}}
+{"data": {"connection_state": "init"}, "info": {"category": "", "code": "E037", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Opening a new connection, currently in state init", "name": "NewConnectionOpening", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.109452Z"}}
+{"data": {"elapsed": 0.01640298, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "SQL status: OK in 0.016 seconds", "name": "SQLQueryStatus", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.126036Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.128924Z"}}
+{"data": {"conn_name": "_test", "sql": "BEGIN"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "On _test: BEGIN", "name": "SQLQuery", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.130472Z"}}
+{"data": {"elapsed": 0.00034181704, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.132207Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.133459Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n    \n        create schema if not exists \"memory\".\"test17949089575672782157_test_rematerialize\"\n    "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "On _test: \n    \n    \n        create schema if not exists \"memory\".\"test17949089575672782157_test_rematerialize\"\n    ", "name": "SQLQuery", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.134618Z"}}
+{"data": {"elapsed": 0.00042812095, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.136326Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E018", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLCommit", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.138307Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.139891Z"}}
+{"data": {"conn_name": "_test", "sql": "COMMIT"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLQuery", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.141281Z"}}
+{"data": {"elapsed": 0.000530525, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "SQL status: OK in 0.001 seconds", "name": "SQLQueryStatus", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.143793Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E010", "extra": {}, "invocation_id": "3e186466-c6b3-4284-857c-81746eac3e95", "level": "debug", "msg": "On _test: Close", "name": "ConnectionClosed", "pid": 12590, "thread": "MainThread", "ts": "2026-11-17T09:49:17.145179Z"}}
+
+
+============================== 17:49:17.157757 | bd733ec9-8253-43c3-8245-a142fb0dd7e6 ==============================
+[0m17:49:17.157757 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:49:17.159115 [debug] [MainThread]: running dbt with arguments {'log_path': '/workspace/logs/test17949089575672782157', 'log_cache_events': 'False', 'target_path': '/task-cache/dbt-target', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'False', 'printer_width': '80', 'fail_fast': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'invocation_command': 'dbt tests/functional/adapter/test_rematerialize.py tests/functional/adapter/test_empty.py tests/functional/adapter/test_ephemeral.py tests/functional/adapter/test_constraints.py tests/functional/adapter/test_python_model.py tests/functional/adapter/test_simple_snapshot.py -q', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/profile1', 'debug': 'False', 'hints_enabled': 'True', 'introspect': 'True', 'use_colors': 'True', 'no_print': 'None', 'warn_error': 'None', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'version_check': 'True'}
+[0m17:49:17.160367 [debug] [MainThread]: Connection '_test' was properly closed.
+[0m17:49:17.167050 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m17:49:17.228479 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m17:49:17.251551 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:49:17.777571 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:49:17.787343 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:49:17.797004 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:49:17.806557 [info ] [MainThread]: Found 6 models, 1 operation, 528 macros
+[0m17:49:17.809226 [info ] [MainThread]: 
+[0m17:49:17.810852 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m17:49:17.812172 [info ] [MainThread]: 
+[0m17:49:17.813571 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:49:17.815726 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m17:49:17.818215 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m17:49:17.819498 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m17:49:17.820527 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:49:17.822681 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:49:17.824763 [debug] [ThreadPool]: On list_memory: Close
+[0m17:49:17.826490 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949089575672782157_test_rematerialize)
+[0m17:49:17.828266 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949089575672782157_test_rematerialize"
+"
+[0m17:49:17.832112 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:17.833780 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949089575672782157_test_rematerialize"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m17:49:17.835611 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:49:17.837819 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:49:17.839586 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:17.840689 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: BEGIN
+[0m17:49:17.842199 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:17.843356 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:17.844430 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949089575672782157_test_rematerialize"} */
+
+    
+    
+        create schema if not exists "memory"."test17949089575672782157_test_rematerialize"
+    
+[0m17:49:17.845998 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:17.847803 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: COMMIT
+[0m17:49:17.849018 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:17.850166 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: COMMIT
+[0m17:49:17.851700 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:17.853044 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: Close
+[0m17:49:17.855582 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949089575672782157_test_rematerialize, now list_memory_test17949089575672782157_test_rematerialize)
+[0m17:49:17.857776 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:17.859218 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: BEGIN
+[0m17:49:17.860587 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:49:17.862547 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:49:17.863812 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:17.865277 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949089575672782157_test_rematerialize"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949089575672782157_test_rematerialize'
+    and lower(table_catalog) = 'memory'
+  
+[0m17:49:17.869721 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:49:17.871862 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: ROLLBACK
+[0m17:49:17.873581 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: Close
+[0m17:49:17.875176 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:17.876339 [debug] [MainThread]: On master: BEGIN
+[0m17:49:17.877262 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:17.879075 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:49:17.880135 [debug] [MainThread]: On master: COMMIT
+[0m17:49:17.881118 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:17.882054 [debug] [MainThread]: On master: COMMIT
+[0m17:49:17.883441 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:17.886277 [debug] [MainThread]: Writing injected SQL for node "operation.base.base-on-run-start-0"
+[0m17:49:17.894918 [info ] [MainThread]: 1 of 1 START hook: base.on-run-start.0 ......................................... [RUN]
+[0m17:49:17.896179 [info ] [MainThread]: 1 of 1 OK hook: base.on-run-start.0 ............................................ [[32mOK[0m in 0.01s]
+[0m17:49:17.897211 [info ] [MainThread]: 
+[0m17:49:17.898171 [debug] [MainThread]: On master: Close
+[0m17:49:17.901841 [debug] [Thread-15 ]: Began running node model.base.upstream_csv_gzip_model
+[0m17:49:17.902273 [debug] [Thread-16 ]: Began running node model.base.upstream_csv_no_header_model
+[0m17:49:17.902682 [debug] [Thread-17 ]: Began running node model.base.upstream_txt_location_model
+[0m17:49:17.904090 [info ] [Thread-15 ]: 1 of 6 START sql external model test17949089575672782157_test_rematerialize.upstream_csv_gzip_model  [RUN]
+[0m17:49:17.905311 [info ] [Thread-16 ]: 2 of 6 START sql external model test17949089575672782157_test_rematerialize.upstream_csv_no_header_model  [RUN]
+[0m17:49:17.906475 [info ] [Thread-17 ]: 3 of 6 START sql external model test17949089575672782157_test_rematerialize.upstream_txt_location_model  [RUN]
+[0m17:49:17.907847 [debug] [Thread-15 ]: Re-using an available connection from the pool (formerly list_memory_test17949089575672782157_test_rematerialize, now model.base.upstream_csv_gzip_model)
+[0m17:49:17.909414 [debug] [Thread-16 ]: Acquiring new duckdb connection 'model.base.upstream_csv_no_header_model'
+[0m17:49:17.911238 [debug] [Thread-17 ]: Acquiring new duckdb connection 'model.base.upstream_txt_location_model'
+[0m17:49:17.912749 [debug] [Thread-15 ]: Began compiling node model.base.upstream_csv_gzip_model
+[0m17:49:17.914281 [debug] [Thread-16 ]: Began compiling node model.base.upstream_csv_no_header_model
+[0m17:49:17.915462 [debug] [Thread-17 ]: Began compiling node model.base.upstream_txt_location_model
+[0m17:49:17.918450 [debug] [Thread-15 ]: Writing injected SQL for node "model.base.upstream_csv_gzip_model"
+[0m17:49:17.921972 [debug] [Thread-16 ]: Writing injected SQL for node "model.base.upstream_csv_no_header_model"
+[0m17:49:17.924897 [debug] [Thread-17 ]: Writing injected SQL for node "model.base.upstream_txt_location_model"
+[0m17:49:17.931483 [debug] [Thread-15 ]: Began executing node model.base.upstream_csv_gzip_model
+[0m17:49:17.931969 [debug] [Thread-16 ]: Began executing node model.base.upstream_csv_no_header_model
+[0m17:49:17.933829 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:17.934476 [debug] [Thread-17 ]: Began executing node model.base.upstream_txt_location_model
+[0m17:49:17.937325 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+select database_name, type from duckdb_databases()
+[0m17:49:17.940387 [debug] [Thread-15 ]: Opening a new connection, currently in state closed
+[0m17:49:17.942765 [debug] [Thread-15 ]: SQL status: OK in 0.002 seconds
+[0m17:49:17.944981 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:17.946405 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949089575672782157_test_rematerialize')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:49:17.948272 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:17.952557 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:17.955194 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:17.958125 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:17.959608 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: BEGIN
+[0m17:49:17.961103 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: BEGIN
+[0m17:49:17.962400 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: BEGIN
+[0m17:49:17.964349 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:17.964710 [debug] [Thread-16 ]: Opening a new connection, currently in state init
+[0m17:49:17.965906 [debug] [Thread-17 ]: Opening a new connection, currently in state init
+[0m17:49:17.967186 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:17.969028 [debug] [Thread-16 ]: SQL status: OK in 0.004 seconds
+[0m17:49:17.970150 [debug] [Thread-17 ]: SQL status: OK in 0.004 seconds
+[0m17:49:17.971094 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_tmp"
+  
+    
+    as (
+      
+select range as id, 'name_' || range as name from range(3)
+    );
+    
+  
+[0m17:49:17.972316 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:17.973492 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:17.975931 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:17.976350 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_tmp"
+  
+    
+    as (
+      
+select 'a' || range as a, 'b' || range as b from range(3)
+    );
+    
+  
+[0m17:49:17.977443 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_tmp"
+  
+    
+    as (
+      
+select range as id from range(4)
+    );
+    
+  
+[0m17:49:17.979164 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:17.981391 [debug] [Thread-16 ]: SQL status: OK in 0.001 seconds
+[0m17:49:17.983248 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:17.983836 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+
+    select count(*) as row_count from "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_tmp"
+  
+[0m17:49:17.986386 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:17.988701 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:17.991310 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:17.991801 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+
+    select count(*) as row_count from "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_tmp"
+  
+[0m17:49:17.993124 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+
+    select count(*) as row_count from "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_tmp"
+  
+[0m17:49:17.996004 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:17.998321 [debug] [Thread-16 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.000017 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.000627 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_csv_gzip_model.csv' (compression gzip, format csv, header 1)
+[0m17:49:18.003713 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:18.006811 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:18.010844 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_csv_no_header_model.csv' (header false, format csv)
+[0m17:49:18.011754 [debug] [Thread-15 ]: SQL status: OK in 0.002 seconds
+[0m17:49:18.013509 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_txt_location.txt' (format csv, header 1)
+[0m17:49:18.019216 [debug] [Thread-15 ]: Writing runtime sql for node "model.base.upstream_csv_gzip_model"
+[0m17:49:18.020026 [debug] [Thread-16 ]: SQL status: OK in 0.003 seconds
+[0m17:49:18.023146 [debug] [Thread-17 ]: SQL status: OK in 0.002 seconds
+[0m17:49:18.025647 [debug] [Thread-16 ]: Writing runtime sql for node "model.base.upstream_csv_no_header_model"
+[0m17:49:18.028011 [debug] [Thread-17 ]: Writing runtime sql for node "model.base.upstream_txt_location_model"
+[0m17:49:18.030923 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:18.032637 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_int" as (
+      select * from read_csv('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_csv_gzip_model.csv', auto_detect=True, compression='gzip')
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:18.033333 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:18.036021 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:18.036560 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_int" as (
+      select * from read_csv('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_csv_no_header_model.csv', header='false', auto_detect='true')
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:18.038332 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_int" as (
+      select * from read_csv('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_txt_location.txt', auto_detect=True)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:18.039446 [debug] [Thread-15 ]: SQL status: OK in 0.005 seconds
+[0m17:49:18.042846 [debug] [Thread-16 ]: SQL status: OK in 0.002 seconds
+[0m17:49:18.045929 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:18.046777 [debug] [Thread-17 ]: SQL status: OK in 0.005 seconds
+[0m17:49:18.050039 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:18.051461 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_int" rename to "upstream_csv_gzip_model"
+[0m17:49:18.054290 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:18.055441 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_int" rename to "upstream_csv_no_header_model"
+[0m17:49:18.057348 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.057744 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_int" rename to "upstream_txt_location_model"
+[0m17:49:18.059295 [debug] [Thread-16 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.060904 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: COMMIT
+[0m17:49:18.062861 [debug] [Thread-17 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.064638 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: COMMIT
+[0m17:49:18.065916 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:18.069132 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: COMMIT
+[0m17:49:18.070608 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:18.071996 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: COMMIT
+[0m17:49:18.073315 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:18.074504 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: COMMIT
+[0m17:49:18.076942 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.078462 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: COMMIT
+[0m17:49:18.096062 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.093731 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:18.082534 [debug] [Thread-16 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.100028 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:18.103077 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_backup" cascade
+    
+[0m17:49:18.108607 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:18.110981 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_backup" cascade
+    
+[0m17:49:18.114868 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_backup" cascade
+    
+[0m17:49:18.116176 [debug] [Thread-15 ]: SQL status: OK in 0.003 seconds
+[0m17:49:18.125024 [debug] [Thread-17 ]: SQL status: OK in 0.005 seconds
+[0m17:49:18.125996 [debug] [Thread-16 ]: SQL status: OK in 0.003 seconds
+[0m17:49:18.130285 [debug] [Thread-15 ]: Using duckdb connection "model.base.upstream_csv_gzip_model"
+[0m17:49:18.135915 [debug] [Thread-17 ]: Using duckdb connection "model.base.upstream_txt_location_model"
+[0m17:49:18.140488 [debug] [Thread-16 ]: Using duckdb connection "model.base.upstream_csv_no_header_model"
+[0m17:49:18.142677 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_gzip_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model__dbt_tmp" cascade
+    
+[0m17:49:18.145251 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_txt_location_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model__dbt_tmp" cascade
+    
+[0m17:49:18.148087 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.upstream_csv_no_header_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model__dbt_tmp" cascade
+    
+[0m17:49:18.150721 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.151988 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.154274 [debug] [Thread-16 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.157089 [debug] [Thread-15 ]: On model.base.upstream_csv_gzip_model: Close
+[0m17:49:18.160641 [debug] [Thread-17 ]: On model.base.upstream_txt_location_model: Close
+[0m17:49:18.174760 [info ] [Thread-17 ]: 3 of 6 OK created sql external model test17949089575672782157_test_rematerialize.upstream_txt_location_model  [[32mOK[0m in 0.26s]
+[0m17:49:18.169874 [info ] [Thread-15 ]: 1 of 6 OK created sql external model test17949089575672782157_test_rematerialize.upstream_csv_gzip_model  [[32mOK[0m in 0.26s]
+[0m17:49:18.165514 [debug] [Thread-16 ]: On model.base.upstream_csv_no_header_model: Close
+[0m17:49:18.177126 [debug] [Thread-17 ]: Finished running node model.base.upstream_txt_location_model
+[0m17:49:18.180521 [debug] [Thread-15 ]: Finished running node model.base.upstream_csv_gzip_model
+[0m17:49:18.185276 [info ] [Thread-16 ]: 2 of 6 OK created sql external model test17949089575672782157_test_rematerialize.upstream_csv_no_header_model  [[32mOK[0m in 0.27s]
+[0m17:49:18.187371 [debug] [Thread-18 ]: Began running node model.base.downstream_of_txt_location_model
+[0m17:49:18.189165 [debug] [Thread-17 ]: Began running node model.base.downstream_of_csv_gzip_model
+[0m17:49:18.190769 [debug] [Thread-16 ]: Finished running node model.base.upstream_csv_no_header_model
+[0m17:49:18.192519 [info ] [Thread-18 ]: 4 of 6 START sql external model test17949089575672782157_test_rematerialize.downstream_of_txt_location_model  [RUN]
+[0m17:49:18.193617 [info ] [Thread-17 ]: 5 of 6 START sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_gzip_model  [RUN]
+[0m17:49:18.195620 [debug] [Thread-15 ]: Began running node model.base.downstream_of_csv_no_header_model
+[0m17:49:18.196751 [debug] [Thread-18 ]: Acquiring new duckdb connection 'model.base.downstream_of_txt_location_model'
+[0m17:49:18.198240 [debug] [Thread-17 ]: Re-using an available connection from the pool (formerly model.base.upstream_txt_location_model, now model.base.downstream_of_csv_gzip_model)
+[0m17:49:18.200539 [info ] [Thread-15 ]: 6 of 6 START sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_no_header_model  [RUN]
+[0m17:49:18.221326 [debug] [Thread-18 ]: Began compiling node model.base.downstream_of_txt_location_model
+[0m17:49:18.227070 [debug] [Thread-17 ]: Began compiling node model.base.downstream_of_csv_gzip_model
+[0m17:49:18.230180 [debug] [Thread-15 ]: Re-using an available connection from the pool (formerly model.base.upstream_csv_gzip_model, now model.base.downstream_of_csv_no_header_model)
+[0m17:49:18.233952 [debug] [Thread-18 ]: Writing injected SQL for node "model.base.downstream_of_txt_location_model"
+[0m17:49:18.238163 [debug] [Thread-17 ]: Writing injected SQL for node "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.240972 [debug] [Thread-15 ]: Began compiling node model.base.downstream_of_csv_no_header_model
+[0m17:49:18.247818 [debug] [Thread-15 ]: Writing injected SQL for node "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.256445 [debug] [Thread-17 ]: Began executing node model.base.downstream_of_csv_gzip_model
+[0m17:49:18.257507 [debug] [Thread-15 ]: Began executing node model.base.downstream_of_csv_no_header_model
+[0m17:49:18.258154 [debug] [Thread-18 ]: Began executing node model.base.downstream_of_txt_location_model
+[0m17:49:18.265267 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.269413 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.276288 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.277725 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: BEGIN
+[0m17:49:18.279328 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: BEGIN
+[0m17:49:18.280687 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: BEGIN
+[0m17:49:18.282213 [debug] [Thread-17 ]: Opening a new connection, currently in state closed
+[0m17:49:18.284667 [debug] [Thread-15 ]: Opening a new connection, currently in state closed
+[0m17:49:18.286849 [debug] [Thread-18 ]: Opening a new connection, currently in state init
+[0m17:49:18.288473 [debug] [Thread-17 ]: SQL status: OK in 0.006 seconds
+[0m17:49:18.289719 [debug] [Thread-15 ]: SQL status: OK in 0.005 seconds
+[0m17:49:18.291188 [debug] [Thread-18 ]: SQL status: OK in 0.004 seconds
+[0m17:49:18.292594 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.294686 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.296198 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.298990 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_tmp"
+  
+    
+    as (
+      select id, name from "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model"
+    );
+    
+  
+[0m17:49:18.300868 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_tmp"
+  
+    
+    as (
+      select * from "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model"
+    );
+    
+  
+[0m17:49:18.302714 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_tmp"
+  
+    
+    as (
+      select id from "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model"
+    );
+    
+  
+[0m17:49:18.308129 [debug] [Thread-17 ]: SQL status: OK in 0.003 seconds
+[0m17:49:18.309257 [debug] [Thread-15 ]: SQL status: OK in 0.003 seconds
+[0m17:49:18.310977 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.311408 [debug] [Thread-18 ]: SQL status: OK in 0.004 seconds
+[0m17:49:18.312979 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.314240 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_gzip_model.parquet' (format parquet)
+[0m17:49:18.315984 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.317100 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_no_header_model.parquet' (format parquet)
+[0m17:49:18.319946 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_txt_location_model.parquet' (format parquet)
+[0m17:49:18.320419 [debug] [Thread-17 ]: SQL status: OK in 0.002 seconds
+[0m17:49:18.322783 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.323636 [debug] [Thread-18 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.324765 [debug] [Thread-17 ]: Writing runtime sql for node "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.326511 [debug] [Thread-15 ]: Writing runtime sql for node "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.328249 [debug] [Thread-18 ]: Writing runtime sql for node "model.base.downstream_of_txt_location_model"
+[0m17:49:18.334687 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.335665 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.336197 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.336685 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_int" as (
+      select * from read_parquet('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_gzip_model.parquet', union_by_name=False)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:18.337999 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_int" as (
+      select * from read_parquet('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_no_header_model.parquet', union_by_name=False)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:18.339695 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_int" as (
+      select * from read_parquet('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_txt_location_model.parquet', union_by_name=False)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:18.342150 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.343424 [debug] [Thread-15 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.344467 [debug] [Thread-18 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.347035 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.350812 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.353590 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.355142 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_int" rename to "downstream_of_csv_gzip_model"
+[0m17:49:18.356187 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_int" rename to "downstream_of_csv_no_header_model"
+[0m17:49:18.357397 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_int" rename to "downstream_of_txt_location_model"
+[0m17:49:18.359126 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.360277 [debug] [Thread-15 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.361345 [debug] [Thread-18 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.363391 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: COMMIT
+[0m17:49:18.365565 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: COMMIT
+[0m17:49:18.367539 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: COMMIT
+[0m17:49:18.369018 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.370733 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.372464 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.374070 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: COMMIT
+[0m17:49:18.375805 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: COMMIT
+[0m17:49:18.377443 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: COMMIT
+[0m17:49:18.379164 [debug] [Thread-17 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.380251 [debug] [Thread-15 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.381407 [debug] [Thread-18 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.383834 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.386176 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.388209 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.389193 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_backup" cascade
+    
+[0m17:49:18.390362 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_backup" cascade
+    
+[0m17:49:18.391440 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_backup" cascade
+    
+[0m17:49:18.392914 [debug] [Thread-17 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.394036 [debug] [Thread-15 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.395295 [debug] [Thread-18 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.397487 [debug] [Thread-17 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:18.400125 [debug] [Thread-15 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:18.403501 [debug] [Thread-18 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:18.404766 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_tmp" cascade
+    
+[0m17:49:18.405875 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_tmp" cascade
+    
+[0m17:49:18.406936 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_tmp" cascade
+    
+[0m17:49:18.408622 [debug] [Thread-17 ]: SQL status: OK in 0.001 seconds
+[0m17:49:18.409432 [debug] [Thread-15 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.410618 [debug] [Thread-18 ]: SQL status: OK in 0.000 seconds
+[0m17:49:18.412517 [debug] [Thread-17 ]: On model.base.downstream_of_csv_gzip_model: Close
+[0m17:49:18.414352 [debug] [Thread-15 ]: On model.base.downstream_of_csv_no_header_model: Close
+[0m17:49:18.416274 [debug] [Thread-18 ]: On model.base.downstream_of_txt_location_model: Close
+[0m17:49:18.417869 [info ] [Thread-17 ]: 5 of 6 OK created sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_gzip_model  [[32mOK[0m in 0.22s]
+[0m17:49:18.419456 [info ] [Thread-15 ]: 6 of 6 OK created sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_no_header_model  [[32mOK[0m in 0.19s]
+[0m17:49:18.420969 [info ] [Thread-18 ]: 4 of 6 OK created sql external model test17949089575672782157_test_rematerialize.downstream_of_txt_location_model  [[32mOK[0m in 0.22s]
+[0m17:49:18.422330 [debug] [Thread-17 ]: Finished running node model.base.downstream_of_csv_gzip_model
+[0m17:49:18.423608 [debug] [Thread-15 ]: Finished running node model.base.downstream_of_csv_no_header_model
+[0m17:49:18.424791 [debug] [Thread-18 ]: Finished running node model.base.downstream_of_txt_location_model
+[0m17:49:18.429404 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:18.430669 [debug] [MainThread]: On master: BEGIN
+[0m17:49:18.431895 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:18.434056 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:49:18.435096 [debug] [MainThread]: On master: COMMIT
+[0m17:49:18.436088 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:18.437025 [debug] [MainThread]: On master: COMMIT
+[0m17:49:18.438311 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:18.439366 [debug] [MainThread]: On master: Close
+[0m17:49:18.440534 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:49:18.441546 [debug] [MainThread]: Connection 'model.base.downstream_of_csv_no_header_model' was properly closed.
+[0m17:49:18.442556 [debug] [MainThread]: Connection 'model.base.upstream_csv_no_header_model' was properly closed.
+[0m17:49:18.443588 [debug] [MainThread]: Connection 'model.base.downstream_of_csv_gzip_model' was properly closed.
+[0m17:49:18.444575 [debug] [MainThread]: Connection 'model.base.downstream_of_txt_location_model' was properly closed.
+[0m17:49:18.445690 [info ] [MainThread]: 
+[0m17:49:18.446838 [info ] [MainThread]: Finished running 6 external models, 1 project hook in 0 hours 0 minutes and 0.63 seconds (0.63s).
+[0m17:49:18.448542 [debug] [MainThread]: Command end result
+[0m17:49:18.521009 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:49:18.529265 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:49:18.537244 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:49:18.542170 [debug] [MainThread]: Wrote artifact RunExecutionResult to /task-cache/dbt-target/run_results.json
+[0m17:49:18.543357 [info ] [MainThread]: 
+[0m17:49:18.544898 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:49:18.546233 [info ] [MainThread]: 
+[0m17:49:18.547310 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=7
+[0m17:49:18.548628 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.3934001, "process_in_blocks": "5095", "process_kernel_time": 0.949752, "process_mem_max_rss": "232812", "process_out_blocks": "304", "process_user_time": 7.046677}
+[0m17:49:18.549668 [debug] [MainThread]: Command `cli run` succeeded at 17:49:18.549551 after 1.39 seconds
+[0m17:49:18.550606 [debug] [MainThread]: Flushing usage events
+
+
+============================== 17:49:18.564328 | 3fe64d9e-3ac0-4b1f-9968-0a91219249cd ==============================
+[0m17:49:18.564328 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:49:18.565480 [debug] [MainThread]: running dbt with arguments {'log_path': '/workspace/logs/test17949089575672782157', 'log_cache_events': 'False', 'target_path': '/task-cache/dbt-target', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'quiet': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'False', 'printer_width': '80', 'fail_fast': 'False', 'static_parser': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'invocation_command': 'dbt tests/functional/adapter/test_rematerialize.py tests/functional/adapter/test_empty.py tests/functional/adapter/test_ephemeral.py tests/functional/adapter/test_constraints.py tests/functional/adapter/test_python_model.py tests/functional/adapter/test_simple_snapshot.py -q', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/profile1', 'debug': 'False', 'hints_enabled': 'True', 'introspect': 'True', 'use_colors': 'True', 'no_print': 'None', 'warn_error': 'None', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'version_check': 'True'}
+[0m17:49:18.573065 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m17:49:18.635048 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m17:49:19.125424 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:49:19.126703 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:49:19.127618 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:49:19.187063 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:49:19.195690 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:49:19.202938 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:49:19.210201 [info ] [MainThread]: Found 6 models, 1 operation, 528 macros
+[0m17:49:19.212163 [info ] [MainThread]: 
+[0m17:49:19.213241 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m17:49:19.214239 [info ] [MainThread]: 
+[0m17:49:19.215531 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:49:19.217202 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m17:49:19.219374 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m17:49:19.220635 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m17:49:19.221936 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:49:19.233036 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m17:49:19.235012 [debug] [ThreadPool]: On list_memory: Close
+[0m17:49:19.236828 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949089575672782157_test_rematerialize)
+[0m17:49:19.238120 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949089575672782157_test_rematerialize"
+"
+[0m17:49:19.240157 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:19.241100 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949089575672782157_test_rematerialize"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m17:49:19.242063 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:49:19.244612 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:49:19.247124 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:19.248682 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: BEGIN
+[0m17:49:19.250884 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:49:19.252468 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:19.253589 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949089575672782157_test_rematerialize"} */
+
+    
+    
+        create schema if not exists "memory"."test17949089575672782157_test_rematerialize"
+    
+[0m17:49:19.255226 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:49:19.256729 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: COMMIT
+[0m17:49:19.257747 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:19.258852 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: COMMIT
+[0m17:49:19.260201 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:49:19.261408 [debug] [ThreadPool]: On create_memory_test17949089575672782157_test_rematerialize: Close
+[0m17:49:19.264103 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949089575672782157_test_rematerialize, now list_memory_test17949089575672782157_test_rematerialize)
+[0m17:49:19.266344 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:19.267635 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: BEGIN
+[0m17:49:19.268672 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:49:19.270226 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:49:19.271284 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949089575672782157_test_rematerialize"
+[0m17:49:19.272462 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949089575672782157_test_rematerialize"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949089575672782157_test_rematerialize'
+    and lower(table_catalog) = 'memory'
+  
+[0m17:49:19.276090 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:49:19.278196 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: ROLLBACK
+[0m17:49:19.280061 [debug] [ThreadPool]: On list_memory_test17949089575672782157_test_rematerialize: Close
+[0m17:49:19.281953 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.283188 [debug] [MainThread]: On master: BEGIN
+[0m17:49:19.284213 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:19.285731 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.286829 [debug] [MainThread]: On master: COMMIT
+[0m17:49:19.287890 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.289038 [debug] [MainThread]: On master: COMMIT
+[0m17:49:19.290571 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:19.294545 [debug] [MainThread]: Writing runtime sql for node "operation.base.base-on-run-start-0"
+[0m17:49:19.304385 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.305875 [debug] [MainThread]: On master: BEGIN
+[0m17:49:19.307909 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.309260 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.311971 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "master"} */
+create schema if not exists "memory"."test17949089575672782157_test_rematerialize"
+[0m17:49:19.315145 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.318528 [debug] [MainThread]: Writing runtime sql for node "operation.base.base-on-run-start-0"
+[0m17:49:19.326623 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.329187 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "master"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model" as (
+            select * from read_csv('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_txt_location.txt', auto_detect=True)
+          );
+[0m17:49:19.336163 [debug] [MainThread]: SQL status: OK in 0.005 seconds
+[0m17:49:19.340703 [debug] [MainThread]: Writing runtime sql for node "operation.base.base-on-run-start-0"
+[0m17:49:19.349114 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.351762 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "master"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model" as (
+            select * from read_csv('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_csv_no_header_model.csv', header='false', auto_detect='true')
+          );
+[0m17:49:19.356571 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m17:49:19.360727 [debug] [MainThread]: Writing runtime sql for node "operation.base.base-on-run-start-0"
+[0m17:49:19.368952 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.372294 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "master"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model" as (
+            select * from read_csv('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/upstream_csv_gzip_model.csv', auto_detect=True, compression='gzip')
+          );
+[0m17:49:19.378690 [debug] [MainThread]: SQL status: OK in 0.003 seconds
+[0m17:49:19.382030 [debug] [MainThread]: On master: COMMIT
+[0m17:49:19.383182 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.384323 [debug] [MainThread]: On master: COMMIT
+[0m17:49:19.386402 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.387700 [debug] [MainThread]: Writing injected SQL for node "operation.base.base-on-run-start-0"
+[0m17:49:19.395131 [info ] [MainThread]: 1 of 1 START hook: base.on-run-start.0 ......................................... [RUN]
+[0m17:49:19.396401 [info ] [MainThread]: 1 of 1 OK hook: base.on-run-start.0 ............................................ [[32mOK[0m in 0.10s]
+[0m17:49:19.397398 [info ] [MainThread]: 
+[0m17:49:19.398364 [debug] [MainThread]: On master: Close
+[0m17:49:19.402107 [debug] [Thread-22 ]: Began running node model.base.downstream_of_csv_gzip_model
+[0m17:49:19.402982 [debug] [Thread-23 ]: Began running node model.base.downstream_of_csv_no_header_model
+[0m17:49:19.403445 [debug] [Thread-24 ]: Began running node model.base.downstream_of_txt_location_model
+[0m17:49:19.404838 [info ] [Thread-22 ]: 1 of 3 START sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_gzip_model  [RUN]
+[0m17:49:19.406010 [info ] [Thread-23 ]: 2 of 3 START sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_no_header_model  [RUN]
+[0m17:49:19.407151 [info ] [Thread-24 ]: 3 of 3 START sql external model test17949089575672782157_test_rematerialize.downstream_of_txt_location_model  [RUN]
+[0m17:49:19.408373 [debug] [Thread-22 ]: Re-using an available connection from the pool (formerly list_memory_test17949089575672782157_test_rematerialize, now model.base.downstream_of_csv_gzip_model)
+[0m17:49:19.409767 [debug] [Thread-23 ]: Acquiring new duckdb connection 'model.base.downstream_of_csv_no_header_model'
+[0m17:49:19.411020 [debug] [Thread-24 ]: Acquiring new duckdb connection 'model.base.downstream_of_txt_location_model'
+[0m17:49:19.412004 [debug] [Thread-22 ]: Began compiling node model.base.downstream_of_csv_gzip_model
+[0m17:49:19.413055 [debug] [Thread-23 ]: Began compiling node model.base.downstream_of_csv_no_header_model
+[0m17:49:19.414240 [debug] [Thread-24 ]: Began compiling node model.base.downstream_of_txt_location_model
+[0m17:49:19.417158 [debug] [Thread-22 ]: Writing injected SQL for node "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.419937 [debug] [Thread-23 ]: Writing injected SQL for node "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.422071 [debug] [Thread-24 ]: Writing injected SQL for node "model.base.downstream_of_txt_location_model"
+[0m17:49:19.427282 [debug] [Thread-23 ]: Began executing node model.base.downstream_of_csv_no_header_model
+[0m17:49:19.427704 [debug] [Thread-22 ]: Began executing node model.base.downstream_of_csv_gzip_model
+[0m17:49:19.429314 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.429704 [debug] [Thread-24 ]: Began executing node model.base.downstream_of_txt_location_model
+[0m17:49:19.432496 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+select database_name, type from duckdb_databases()
+[0m17:49:19.434880 [debug] [Thread-23 ]: Opening a new connection, currently in state init
+[0m17:49:19.436636 [debug] [Thread-23 ]: SQL status: OK in 0.002 seconds
+[0m17:49:19.438366 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.439914 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949089575672782157_test_rematerialize')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:49:19.441161 [debug] [Thread-24 ]: Opening a new connection, currently in state init
+[0m17:49:19.443442 [debug] [Thread-24 ]: SQL status: OK in 0.002 seconds
+[0m17:49:19.447883 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.450575 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.453601 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.454999 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: BEGIN
+[0m17:49:19.456312 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: BEGIN
+[0m17:49:19.457391 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: BEGIN
+[0m17:49:19.458908 [debug] [Thread-24 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.459969 [debug] [Thread-22 ]: Opening a new connection, currently in state closed
+[0m17:49:19.461898 [debug] [Thread-23 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.463078 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.464974 [debug] [Thread-22 ]: SQL status: OK in 0.005 seconds
+[0m17:49:19.466068 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.467321 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_tmp"
+  
+    
+    as (
+      select id from "memory"."test17949089575672782157_test_rematerialize"."upstream_txt_location_model"
+    );
+    
+  
+[0m17:49:19.468669 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.470217 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_tmp"
+  
+    
+    as (
+      select * from "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_no_header_model"
+    );
+    
+  
+[0m17:49:19.472800 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+
+    
+
+    create  table
+      "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_tmp"
+  
+    
+    as (
+      select id, name from "memory"."test17949089575672782157_test_rematerialize"."upstream_csv_gzip_model"
+    );
+    
+  
+[0m17:49:19.474700 [debug] [Thread-24 ]: SQL status: OK in 0.003 seconds
+[0m17:49:19.476703 [debug] [Thread-23 ]: SQL status: OK in 0.002 seconds
+[0m17:49:19.478845 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.479921 [debug] [Thread-22 ]: SQL status: OK in 0.004 seconds
+[0m17:49:19.481216 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.482832 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_txt_location_model.parquet' (format parquet)
+[0m17:49:19.484942 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.618730 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_no_header_model.parquet' (format parquet)
+[0m17:49:19.621319 [debug] [Thread-24 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.621742 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+copy "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_tmp" to '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_gzip_model.parquet' (format parquet)
+[0m17:49:19.624891 [debug] [Thread-24 ]: Writing runtime sql for node "model.base.downstream_of_txt_location_model"
+[0m17:49:19.625396 [debug] [Thread-23 ]: SQL status: OK in 0.002 seconds
+[0m17:49:19.627275 [debug] [Thread-22 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.629112 [debug] [Thread-23 ]: Writing runtime sql for node "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.631290 [debug] [Thread-22 ]: Writing runtime sql for node "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.634086 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.635307 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_int" as (
+      select * from read_parquet('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_txt_location_model.parquet', union_by_name=False)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:19.636195 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.637421 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.637925 [debug] [Thread-24 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.638436 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_int" as (
+      select * from read_parquet('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_no_header_model.parquet', union_by_name=False)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:19.640931 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+create or replace view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_int" as (
+      select * from read_parquet('/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-10/rematerialize_read_options/downstream_of_csv_gzip_model.parquet', union_by_name=False)
+      -- drop the sentinel row written for an empty relation
+      
+    );
+[0m17:49:19.643971 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.646264 [debug] [Thread-23 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.647511 [debug] [Thread-22 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.647954 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_int" rename to "downstream_of_txt_location_model"
+[0m17:49:19.650879 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.653573 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.655450 [debug] [Thread-24 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.656341 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_int" rename to "downstream_of_csv_no_header_model"
+[0m17:49:19.657557 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+alter view "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_int" rename to "downstream_of_csv_gzip_model"
+[0m17:49:19.659651 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: COMMIT
+[0m17:49:19.661406 [debug] [Thread-23 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.663082 [debug] [Thread-22 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.663890 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.665986 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: COMMIT
+[0m17:49:19.667806 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: COMMIT
+[0m17:49:19.668797 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: COMMIT
+[0m17:49:19.670282 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.671311 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.673203 [debug] [Thread-24 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.674066 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: COMMIT
+[0m17:49:19.675168 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: COMMIT
+[0m17:49:19.677401 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.679207 [debug] [Thread-23 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.680296 [debug] [Thread-22 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.681263 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_backup" cascade
+    
+[0m17:49:19.683628 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.685724 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.687458 [debug] [Thread-24 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.688267 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_backup" cascade
+    
+[0m17:49:19.689274 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_backup" cascade
+    
+[0m17:49:19.691814 [debug] [Thread-24 ]: Using duckdb connection "model.base.downstream_of_txt_location_model"
+[0m17:49:19.693429 [debug] [Thread-23 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.695201 [debug] [Thread-22 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.696185 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_txt_location_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model__dbt_tmp" cascade
+    
+[0m17:49:19.699249 [debug] [Thread-23 ]: Using duckdb connection "model.base.downstream_of_csv_no_header_model"
+[0m17:49:19.702781 [debug] [Thread-22 ]: Using duckdb connection "model.base.downstream_of_csv_gzip_model"
+[0m17:49:19.704911 [debug] [Thread-24 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.705402 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_no_header_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model__dbt_tmp" cascade
+    
+[0m17:49:19.706581 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.base.downstream_of_csv_gzip_model"} */
+
+      drop table if exists "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model__dbt_tmp" cascade
+    
+[0m17:49:19.709249 [debug] [Thread-24 ]: On model.base.downstream_of_txt_location_model: Close
+[0m17:49:19.711458 [debug] [Thread-23 ]: SQL status: OK in 0.001 seconds
+[0m17:49:19.712794 [debug] [Thread-22 ]: SQL status: OK in 0.000 seconds
+[0m17:49:19.713978 [info ] [Thread-24 ]: 3 of 3 OK created sql external model test17949089575672782157_test_rematerialize.downstream_of_txt_location_model  [[32mOK[0m in 0.30s]
+[0m17:49:19.716023 [debug] [Thread-23 ]: On model.base.downstream_of_csv_no_header_model: Close
+[0m17:49:19.718150 [debug] [Thread-22 ]: On model.base.downstream_of_csv_gzip_model: Close
+[0m17:49:19.719374 [debug] [Thread-24 ]: Finished running node model.base.downstream_of_txt_location_model
+[0m17:49:19.720806 [info ] [Thread-23 ]: 2 of 3 OK created sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_no_header_model  [[32mOK[0m in 0.31s]
+[0m17:49:19.721945 [info ] [Thread-22 ]: 1 of 3 OK created sql external model test17949089575672782157_test_rematerialize.downstream_of_csv_gzip_model  [[32mOK[0m in 0.31s]
+[0m17:49:19.724060 [debug] [Thread-23 ]: Finished running node model.base.downstream_of_csv_no_header_model
+[0m17:49:19.725337 [debug] [Thread-22 ]: Finished running node model.base.downstream_of_csv_gzip_model
+[0m17:49:19.728442 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.729450 [debug] [MainThread]: On master: BEGIN
+[0m17:49:19.730370 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:19.731861 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.732785 [debug] [MainThread]: On master: COMMIT
+[0m17:49:19.733788 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:49:19.734778 [debug] [MainThread]: On master: COMMIT
+[0m17:49:19.735964 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:49:19.736932 [debug] [MainThread]: On master: Close
+[0m17:49:19.738415 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:49:19.739520 [debug] [MainThread]: Connection 'model.base.downstream_of_csv_gzip_model' was properly closed.
+[0m17:49:19.741937 [debug] [MainThread]: Connection 'model.base.downstream_of_csv_no_header_model' was properly closed.
+[0m17:49:19.743364 [debug] [MainThread]: Connection 'model.base.downstream_of_txt_location_model' was properly closed.
+[0m17:49:19.744484 [info ] [MainThread]: 
+[0m17:49:19.745545 [info ] [MainThread]: Finished running 3 external models, 1 project hook in 0 hours 0 minutes and 0.53 seconds (0.53s).
+[0m17:49:19.747222 [debug] [MainThread]: Command end result
+[0m17:49:19.805818 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:49:19.814781 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:49:19.822984 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:49:19.827092 [debug] [MainThread]: Wrote artifact RunExecutionResult to /task-cache/dbt-target/run_results.json
+[0m17:49:19.828115 [info ] [MainThread]: 
+[0m17:49:19.829209 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:49:19.830202 [info ] [MainThread]: 
+[0m17:49:19.831290 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m17:49:19.832664 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.270559, "process_in_blocks": "6528", "process_kernel_time": 1.040646, "process_mem_max_rss": "247376", "process_out_blocks": "336", "process_user_time": 7.566872}
+[0m17:49:19.834164 [debug] [MainThread]: Command `cli run` succeeded at 17:49:19.833918 after 1.27 seconds
+[0m17:49:19.835295 [debug] [MainThread]: Flushing usage events
+[0m17:49:19.836445 [debug] [MainThread]: test connection "__test" executing: select count(*) from "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_gzip_model"
+[0m17:49:19.837593 [debug] [MainThread]: Acquiring new duckdb connection '_test'
+[0m17:49:19.838549 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:49:19.841106 [debug] [MainThread]: On _test: Close
+[0m17:49:19.842666 [debug] [MainThread]: test connection "__test" executing: select count(*) from "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model"
+[0m17:49:19.843978 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:19.846032 [debug] [MainThread]: On _test: Close
+[0m17:49:19.847350 [debug] [MainThread]: test connection "__test" executing: select count(*) from "memory"."test17949089575672782157_test_rematerialize"."downstream_of_txt_location_model"
+[0m17:49:19.848452 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:19.850400 [debug] [MainThread]: On _test: Close
+[0m17:49:19.851787 [debug] [MainThread]: test connection "__test" executing: select min(column0) from "memory"."test17949089575672782157_test_rematerialize"."downstream_of_csv_no_header_model"
+[0m17:49:19.852845 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:19.854912 [debug] [MainThread]: On _test: Close
+[0m17:49:19.856869 [debug] [MainThread]: Dropping schema "database: "memory"
+schema: "test17949089575672782157_test_rematerialize"
+".
+[0m17:49:19.858750 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:49:19.859720 [debug] [MainThread]: On _test: BEGIN
+[0m17:49:19.860633 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:49:19.861959 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.862966 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:49:19.863893 [debug] [MainThread]: On _test: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "_test"} */
+drop schema if exists "memory"."test17949089575672782157_test_rematerialize" cascade
+[0m17:49:19.866167 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.867901 [debug] [MainThread]: On _test: COMMIT
+[0m17:49:19.868966 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:49:19.870039 [debug] [MainThread]: On _test: COMMIT
+[0m17:49:19.871998 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:49:19.873962 [debug] [MainThread]: On _test: Close

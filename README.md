@@ -524,10 +524,11 @@ Unfortunately incremental materialization strategies are not yet supported for `
 
 #### Incremental Strategy Configuration
 
-dbt-duckdb supports the `delete+insert`, `append`, `merge`, and `microbatch` strategies for incremental `table` models.
+dbt-duckdb supports the `delete+insert`, `append`, `merge`, `microbatch`, and `cdc` strategies for incremental `table` models.
 
 * The `merge` strategy requires DuckDB >= 1.4.0 and provides access to DuckDB's native MERGE statement.
 * The `microbatch` strategy requires dbt-core's microbatch support (dbt-core >= 1.9).
+* The `cdc` strategy applies versioned change batches (upsert/delete by key and version) and is meant for replayable, out-of-order CDC feeds.
 
 **Append Strategy:**
 
@@ -564,6 +565,34 @@ models:
       incremental_strategy: delete+insert
       unique_key: id  # or ['id', 'date'] for composite keys
       incremental_predicates: ["updated_at >= '2023-01-01'"]
+```
+
+
+**CDC Strategy:**
+
+The `cdc` strategy loads versioned change data capture (CDC) batches whose upstream may replay them out of order. Each model row carries a business key, an integer version, an `upsert`/`delete` operation, and the full business row. For every key only the change with the highest version is applied: older versions are ignored, replaying an identical change is a no-op, and conflicting contents at the same version fail the run. The highest applied version per key is remembered in a `<model>__dbt_cdc_state` table (updated in the same transaction as the business table), so deletes are not resurrected by stale updates across runs, and a key can be brought back by a newer version. The version/operation columns never appear in the business table.
+
+| Configuration | Type | Default | Description
+| :---: | :---: | :---: | ---
+| `unique_key` | string/list | required | Business key column(s) used to match changes
+| `cdc_version_column` | string | `_cdc_version` | Name of the integer version column in the model output
+| `cdc_operation_column` | string | `_cdc_op` | Name of the operation column in the model output
+| `cdc_upsert_values` | list | `['upsert']` | Operation values treated as upserts (case-insensitive)
+| `cdc_delete_values` | list | `['delete']` | Operation values treated as deletes (case-insensitive)
+
+Example:
+
+```yaml
+models:
+  - name: my_cdc_model
+    config:
+      materialized: incremental
+      incremental_strategy: cdc
+      unique_key: id  # or ['id', 'date'] for composite keys
+      cdc_version_column: _cdc_version
+      cdc_operation_column: _cdc_op
+      cdc_upsert_values: ['upsert']
+      cdc_delete_values: ['delete']
 ```
 
 

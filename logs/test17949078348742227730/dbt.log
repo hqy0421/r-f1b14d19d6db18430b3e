@@ -1,0 +1,273 @@
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E005", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Acquiring new duckdb connection '_test'", "name": "NewConnection", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.137764Z"}}
+{"data": {"relation": {"database": "memory", "identifier": "", "schema": "test17949078348742227730_test_incremental_microbatch"}}, "info": {"category": "", "code": "E020", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Creating schema \"database: \"memory\"\nschema: \"test17949078348742227730_test_incremental_microbatch\"\n\"", "name": "SchemaCreation", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.139493Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.142547Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "On _test: \n    \n        select type from duckdb_databases()\n        where lower(database_name)='memory'\n        and type != 'duckdb'\n    \n  ", "name": "SQLQuery", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.143599Z"}}
+{"data": {"connection_state": "init"}, "info": {"category": "", "code": "E037", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Opening a new connection, currently in state init", "name": "NewConnectionOpening", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.144440Z"}}
+{"data": {"elapsed": 0.015388518, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "SQL status: OK in 0.015 seconds", "name": "SQLQueryStatus", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.159937Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.162129Z"}}
+{"data": {"conn_name": "_test", "sql": "BEGIN"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "On _test: BEGIN", "name": "SQLQuery", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.163491Z"}}
+{"data": {"elapsed": 0.000508623, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "SQL status: OK in 0.001 seconds", "name": "SQLQueryStatus", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.165006Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.165975Z"}}
+{"data": {"conn_name": "_test", "sql": "\n    \n    \n        create schema if not exists \"memory\".\"test17949078348742227730_test_incremental_microbatch\"\n    "}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "On _test: \n    \n    \n        create schema if not exists \"memory\".\"test17949078348742227730_test_incremental_microbatch\"\n    ", "name": "SQLQuery", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.166836Z"}}
+{"data": {"elapsed": 0.00048252195, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "SQL status: OK in 0.000 seconds", "name": "SQLQueryStatus", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.168472Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E018", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLCommit", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.169881Z"}}
+{"data": {"conn_name": "_test", "conn_type": "duckdb"}, "info": {"category": "", "code": "E015", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "Using duckdb connection \"_test\"", "name": "ConnectionUsed", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.171730Z"}}
+{"data": {"conn_name": "_test", "sql": "COMMIT"}, "info": {"category": "", "code": "E016", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "On _test: COMMIT", "name": "SQLQuery", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.172909Z"}}
+{"data": {"elapsed": 0.000555826, "query_id": "", "status": "OK"}, "info": {"category": "", "code": "E017", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "SQL status: OK in 0.001 seconds", "name": "SQLQueryStatus", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.174461Z"}}
+{"data": {"conn_name": "_test"}, "info": {"category": "", "code": "E010", "extra": {}, "invocation_id": "e2bb1c7f-45b7-482d-aff5-1831b4fe242d", "level": "debug", "msg": "On _test: Close", "name": "ConnectionClosed", "pid": 6512, "thread": "MainThread", "ts": "2026-11-17T09:30:34.175448Z"}}
+
+
+============================== 17:30:34.186446 | 90300eaa-ee11-44fe-84a6-6d437e221f3d ==============================
+[0m17:30:34.186446 [info ] [MainThread]: Running with dbt=1.12.6
+[0m17:30:34.188172 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'quiet': 'False', 'introspect': 'True', 'empty': 'False', 'target_path': '/task-cache/dbt-target', 'write_json': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'False', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'profiles_dir': '/home/node/.solocoder-posix-tmp/pytest-of-node/pytest-1/profile20', 'log_format': 'default', 'partial_parse': 'True', 'printer_width': '80', 'debug': 'False', 'no_print': 'None', 'static_parser': 'True', 'invocation_command': 'dbt tests/functional/adapter/test_basic.py tests/functional/adapter/test_hooks.py tests/functional/adapter/test_incremental_microbatch.py -q', 'use_experimental_parser': 'False', 'maximum_seed_size_mib': '1', 'warn_error': 'None', 'cache_selected_only': 'False', 'log_path': '/workspace/logs/test17949078348742227730', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m17:30:34.189408 [debug] [MainThread]: Connection '_test' was properly closed.
+[0m17:30:34.194478 [info ] [MainThread]: Registered adapter: duckdb=0.0.0
+[0m17:30:34.233954 [debug] [MainThread]: checksum: e9957200bf7000fda5bd283ff63bf0fd6e1f584f977e2820ce0897d7d3b4f39f, vars: {}, profile: test, target: default, version: 1.12.6
+[0m17:30:34.252502 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:30:34.562932 [warn ] [MainThread]: [[33mWARNING[0m]: The microbatch model 'microbatch_unique_key_not_supported' has no 'ref' or 'source' input with an 'event_time' configuration. 
+This means no filtering can be applied and can result in unexpected duplicate records in the resulting microbatch model.
+[0m17:30:34.618999 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:30:34.626220 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:30:34.632055 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:30:34.637595 [info ] [MainThread]: Found 1 model, 528 macros
+[0m17:30:34.639140 [info ] [MainThread]: 
+[0m17:30:34.640595 [info ] [MainThread]: Concurrency: 4 threads (target='default')
+[0m17:30:34.641686 [info ] [MainThread]: 
+[0m17:30:34.642719 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:30:34.644271 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_memory'
+[0m17:30:34.646090 [debug] [ThreadPool]: Using duckdb connection "list_memory"
+[0m17:30:34.647070 [debug] [ThreadPool]: On list_memory: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"memory"'
+    
+  
+  
+[0m17:30:34.647982 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:30:34.649943 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:30:34.651551 [debug] [ThreadPool]: On list_memory: Close
+[0m17:30:34.652919 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_memory, now create_memory_test17949078348742227730_test_incremental_microbatch)
+[0m17:30:34.653741 [debug] [ThreadPool]: Creating schema "database: "memory"
+schema: "test17949078348742227730_test_incremental_microbatch"
+"
+[0m17:30:34.655723 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949078348742227730_test_incremental_microbatch"
+[0m17:30:34.656662 [debug] [ThreadPool]: On create_memory_test17949078348742227730_test_incremental_microbatch: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949078348742227730_test_incremental_microbatch"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='memory'
+        and type != 'duckdb'
+    
+  
+[0m17:30:34.657432 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:30:34.659142 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:30:34.660735 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949078348742227730_test_incremental_microbatch"
+[0m17:30:34.661495 [debug] [ThreadPool]: On create_memory_test17949078348742227730_test_incremental_microbatch: BEGIN
+[0m17:30:34.662544 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:30:34.663681 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949078348742227730_test_incremental_microbatch"
+[0m17:30:34.664507 [debug] [ThreadPool]: On create_memory_test17949078348742227730_test_incremental_microbatch: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "create_memory_test17949078348742227730_test_incremental_microbatch"} */
+
+    
+    
+        create schema if not exists "memory"."test17949078348742227730_test_incremental_microbatch"
+    
+[0m17:30:34.665922 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:30:34.667286 [debug] [ThreadPool]: On create_memory_test17949078348742227730_test_incremental_microbatch: COMMIT
+[0m17:30:34.668069 [debug] [ThreadPool]: Using duckdb connection "create_memory_test17949078348742227730_test_incremental_microbatch"
+[0m17:30:34.668826 [debug] [ThreadPool]: On create_memory_test17949078348742227730_test_incremental_microbatch: COMMIT
+[0m17:30:34.669955 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:30:34.671729 [debug] [ThreadPool]: On create_memory_test17949078348742227730_test_incremental_microbatch: Close
+[0m17:30:34.673981 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_memory_test17949078348742227730_test_incremental_microbatch, now list_memory_test17949078348742227730_test_incremental_microbatch)
+[0m17:30:34.675823 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949078348742227730_test_incremental_microbatch"
+[0m17:30:34.676731 [debug] [ThreadPool]: On list_memory_test17949078348742227730_test_incremental_microbatch: BEGIN
+[0m17:30:34.677800 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:30:34.679442 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:30:34.680289 [debug] [ThreadPool]: Using duckdb connection "list_memory_test17949078348742227730_test_incremental_microbatch"
+[0m17:30:34.681328 [debug] [ThreadPool]: On list_memory_test17949078348742227730_test_incremental_microbatch: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "list_memory_test17949078348742227730_test_incremental_microbatch"} */
+select
+      'memory' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'test17949078348742227730_test_incremental_microbatch'
+    and lower(table_catalog) = 'memory'
+  
+[0m17:30:34.684526 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:30:34.686688 [debug] [ThreadPool]: On list_memory_test17949078348742227730_test_incremental_microbatch: ROLLBACK
+[0m17:30:34.688036 [debug] [ThreadPool]: On list_memory_test17949078348742227730_test_incremental_microbatch: Close
+[0m17:30:34.689287 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:30:34.690030 [debug] [MainThread]: On master: BEGIN
+[0m17:30:34.690632 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:30:34.691572 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:30:34.692264 [debug] [MainThread]: On master: COMMIT
+[0m17:30:34.693189 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:30:34.694049 [debug] [MainThread]: On master: COMMIT
+[0m17:30:34.695328 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:30:34.696012 [debug] [MainThread]: On master: Close
+[0m17:30:34.698686 [debug] [MainThread]: Waiting for microbatch model to be run: microbatch_unique_key_not_supported.
+	pool.max_microbatch_models: 2
+	len(self.job_queue.in_progress_microbatch): 1
+[0m17:30:34.699951 [debug] [Thread-299]: Began running node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.702112 [info ] [Thread-299]: 1 of 1 START sql microbatch model test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported  [RUN]
+[0m17:30:34.703409 [debug] [Thread-299]: Re-using an available connection from the pool (formerly list_memory_test17949078348742227730_test_incremental_microbatch, now model.test.microbatch_unique_key_not_supported)
+[0m17:30:34.704357 [debug] [Thread-299]: Began compiling node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.705213 [debug] [Thread-299]: Began executing node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.706426 [debug] [Thread-299]: batch 2025-01-01 of test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported is being run sequentially
+[0m17:30:34.707442 [debug] [Thread-299]: Began running node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.708609 [info ] [Thread-299]: Batch 1 of 2 START batch 2025-01-01 of test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported  [RUN]
+[0m17:30:34.709763 [debug] [Thread-299]: Began compiling node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.712086 [debug] [Thread-299]: Writing injected SQL for node "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.720597 [debug] [Thread-299]: Began executing node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.722475 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.723511 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.microbatch_unique_key_not_supported"} */
+select database_name, type from duckdb_databases()
+[0m17:30:34.724276 [debug] [Thread-299]: Opening a new connection, currently in state closed
+[0m17:30:34.726028 [debug] [Thread-299]: SQL status: OK in 0.002 seconds
+[0m17:30:34.727881 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.728819 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.microbatch_unique_key_not_supported"} */
+
+                    select table_name, constraint_type from duckdb_constraints()
+                    where lower(database_name) = lower('memory')
+                      and lower(schema_name) = lower('test17949078348742227730_test_incremental_microbatch')
+                      and constraint_type in ('PRIMARY KEY', 'UNIQUE', 'FOREIGN KEY')
+                    
+[0m17:30:34.730614 [debug] [Thread-299]: SQL status: OK in 0.001 seconds
+[0m17:30:34.734279 [debug] [Thread-299]: Writing runtime sql for node "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.742442 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.743758 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: BEGIN
+[0m17:30:34.745049 [debug] [Thread-299]: SQL status: OK in 0.000 seconds
+[0m17:30:34.746445 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.747452 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.microbatch_unique_key_not_supported"} */
+
+    
+
+    create  table
+      "memory"."test17949078348742227730_test_incremental_microbatch"."microbatch_unique_key_not_supported"
+  
+    
+    as (
+      
+
+select 1 as id, '2025-01-01 00:00:00'::timestamp as event_time
+    );
+    
+  
+  
+[0m17:30:34.749403 [debug] [Thread-299]: SQL status: OK in 0.001 seconds
+[0m17:30:34.751543 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: COMMIT
+[0m17:30:34.752497 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.753507 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: COMMIT
+[0m17:30:34.754813 [debug] [Thread-299]: SQL status: OK in 0.000 seconds
+[0m17:30:34.756110 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: Close
+[0m17:30:34.757428 [info ] [Thread-299]: Batch 1 of 2 OK created batch 2025-01-01 of test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported  [[32mOK[0m in 0.05s]
+[0m17:30:34.758718 [debug] [Thread-299]: Finished running node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.759626 [debug] [Thread-299]: batch 2025-01-02 of test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported is being run sequentially
+[0m17:30:34.760327 [debug] [Thread-299]: Began running node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.761412 [info ] [Thread-299]: Batch 2 of 2 START batch 2025-01-02 of test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported  [RUN]
+[0m17:30:34.762349 [debug] [Thread-299]: Began compiling node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.764670 [debug] [Thread-299]: Writing injected SQL for node "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.771470 [debug] [Thread-299]: Began executing node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.775769 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.777107 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.microbatch_unique_key_not_supported"} */
+
+    
+    
+
+    create temporary table
+      "microbatch_unique_key_not_supported__dbt_tmp_2025010220261117173034774637"
+  
+    
+    as (
+      
+
+select 1 as id, '2025-01-01 00:00:00'::timestamp as event_time
+    );
+    
+  
+  
+[0m17:30:34.777989 [debug] [Thread-299]: Opening a new connection, currently in state closed
+[0m17:30:34.779945 [debug] [Thread-299]: SQL status: OK in 0.002 seconds
+[0m17:30:34.782771 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.787875 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: BEGIN
+[0m17:30:34.789677 [debug] [Thread-299]: SQL status: OK in 0.000 seconds
+[0m17:30:34.790735 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.791591 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.microbatch_unique_key_not_supported"} */
+
+      select
+          column_name,
+          column_type as data_type,
+          cast(null as bigint) as character_maximum_length,
+          cast(null as bigint) as numeric_precision,
+          cast(null as bigint) as numeric_scale
+      from (describe "memory"."test17949078348742227730_test_incremental_microbatch"."microbatch_unique_key_not_supported")
+  
+[0m17:30:34.793170 [debug] [Thread-299]: SQL status: OK in 0.001 seconds
+[0m17:30:34.794921 [debug] [Thread-299]: Using duckdb connection "model.test.microbatch_unique_key_not_supported"
+[0m17:30:34.795741 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "node_id": "model.test.microbatch_unique_key_not_supported"} */
+SELECT version()
+[0m17:30:34.796880 [debug] [Thread-299]: SQL status: OK in 0.000 seconds
+[0m17:30:34.798175 [error] [Thread-299]: [[31mERROR[0m]: Unhandled error while executing 
+Exception on worker thread. Compilation Error in model microbatch_unique_key_not_supported (models/microbatch_unique_key_not_supported.sql)
+  microbatch incremental strategy does not support 'unique_key'. Microbatch runs delete+insert per batch based on 'event_time' and does not do key-based upserts. Remove 'unique_key' or use incremental_strategy='merge'.
+  
+  > in macro duckdb__get_incremental_microbatch_sql (macros/materializations/incremental_strategy/microbatch.sql)
+  > called by macro get_incremental_microbatch_sql (macros/materializations/models/incremental/strategies.sql)
+  > called by macro materialization_incremental_duckdb (macros/materializations/incremental.sql)
+  > called by model microbatch_unique_key_not_supported (models/microbatch_unique_key_not_supported.sql)
+[0m17:30:34.799001 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: ROLLBACK
+[0m17:30:34.800033 [debug] [Thread-299]: On model.test.microbatch_unique_key_not_supported: Close
+[0m17:30:34.801174 [error] [Thread-299]: Batch 2 of 2 ERROR creating batch 2025-01-02 of test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported  [[31mERROR[0m in 0.04s]
+[0m17:30:34.802082 [debug] [Thread-299]: Finished running node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.803318 [info ] [Thread-299]: 1 of 1 PARTIALLY created sql microbatch model test17949078348742227730_test_incremental_microbatch.microbatch_unique_key_not_supported  [[33mPARTIAL SUCCESS (1/2)[0m in 0.10s]
+[0m17:30:34.804370 [debug] [Thread-299]: Finished running node model.test.microbatch_unique_key_not_supported
+[0m17:30:34.805416 [debug] [Thread-305]: Marking all children of 'model.test.microbatch_unique_key_not_supported' to be skipped because of status 'partial success'.  Reason: PARTIAL SUCCESS (1/2).
+[0m17:30:34.809043 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:30:34.810160 [debug] [MainThread]: On master: BEGIN
+[0m17:30:34.811000 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:30:34.812186 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:30:34.813071 [debug] [MainThread]: On master: COMMIT
+[0m17:30:34.814106 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:30:34.814926 [debug] [MainThread]: On master: COMMIT
+[0m17:30:34.816139 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:30:34.816960 [debug] [MainThread]: On master: Close
+[0m17:30:34.818022 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:30:34.818895 [debug] [MainThread]: Connection 'model.test.microbatch_unique_key_not_supported' was properly closed.
+[0m17:30:34.819591 [info ] [MainThread]: 
+[0m17:30:34.820305 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m17:30:34.821286 [debug] [MainThread]: Command end result
+[0m17:30:34.864010 [debug] [MainThread]: Wrote artifact WritableManifest to /task-cache/dbt-target/manifest.json
+[0m17:30:34.870318 [debug] [MainThread]: Wrote artifact SemanticManifest to /task-cache/dbt-target/semantic_manifest.json
+[0m17:30:34.875970 [debug] [MainThread]: Wrote artifact OsiDocument to /task-cache/dbt-target/osi_document.json
+[0m17:30:34.881135 [debug] [MainThread]: Wrote artifact RunExecutionResult to /task-cache/dbt-target/run_results.json
+[0m17:30:34.882225 [info ] [MainThread]: 
+[0m17:30:34.883211 [info ] [MainThread]: [33mCompleted with 1 partial success and 0 warnings[0m
+[0m17:30:34.884030 [info ] [MainThread]: 
+[0m17:30:34.885124 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m17:30:34.886260 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.70236707, "process_in_blocks": "75227", "process_kernel_time": 3.397487, "process_mem_max_rss": "246468", "process_out_blocks": "2440", "process_user_time": 23.232994}
+[0m17:30:34.887267 [debug] [MainThread]: Command `cli run` failed at 17:30:34.887131 after 0.70 seconds
+[0m17:30:34.888182 [debug] [MainThread]: Flushing usage events
+[0m17:30:34.889851 [debug] [MainThread]: Acquiring new duckdb connection '_test'
+[0m17:30:34.890890 [debug] [MainThread]: Dropping schema "database: "memory"
+schema: "test17949078348742227730_test_incremental_microbatch"
+".
+[0m17:30:34.892872 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:30:34.893812 [debug] [MainThread]: On _test: BEGIN
+[0m17:30:34.894643 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:30:34.896090 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:30:34.897387 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:30:34.898191 [debug] [MainThread]: On _test: /* {"app": "dbt", "dbt_version": "1.12.6", "profile_name": "test", "target_name": "default", "connection_name": "_test"} */
+drop schema if exists "memory"."test17949078348742227730_test_incremental_microbatch" cascade
+[0m17:30:34.899586 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:30:34.901854 [debug] [MainThread]: On _test: COMMIT
+[0m17:30:34.903031 [debug] [MainThread]: Using duckdb connection "_test"
+[0m17:30:34.903837 [debug] [MainThread]: On _test: COMMIT
+[0m17:30:34.905225 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:30:34.906290 [debug] [MainThread]: On _test: Close
